@@ -1,0 +1,78 @@
+﻿<Controls:Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:Elysium.Controls;assembly=Elysium"
+        xmlns:params="http://schemas.codeplex.com/elysium/params" x:Class="WinPos.App.TestElysium"        
+        WindowStartupLocation="CenterScreen" 
+        params:Design.Theme="Dark" 
+        params:Manager.AccentBrush= "Orange"
+        params:Manager.ContrastBrush="White"
+        params:Manager.Theme="Dark" ResizeMode="CanResizeWithGrip" Title="Involved RCON" Height="593.209" Width="936.657" Icon="Properties/img/icon.ico" Margin="10,10,0,0">
+    <Controls:Window.ApplicationBar>
+        <Controls:ApplicationBar>
+            <!-- Right Click on the UI to open Application Bar -->
+            <Controls:DropDownCommandButton  Header="THEME"/>
+        </Controls:ApplicationBar>
+    </Controls:Window.ApplicationBar>
+
+    <Controls:Window.TitleBar>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Content="?" />
+        </Grid>
+    </Controls:Window.TitleBar>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="407*"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.RowSpan="2">
+            <TabItem Header="CONNEXIONS">
+                <Grid>
+                    <Image HorizontalAlignment="Center" Height="210" Margin="0" VerticalAlignment="Center" Width="787" Source="Properties/img/banner.png" Opacity="0.4"/> 
+                    <TextBlock>The Metro UI Dashboard here.</TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Header="MONITORING">
+                <Grid>
+                    <TextBlock>Sales Board here.</TextBlock>
+                    <Controls:ProgressRing State="Indeterminate" Width="64" Height="64"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="LISTE DES JOUEURS">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="148*"/>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="31*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.ColumnSpan="3">Product Board here.</TextBlock>
+                    <Controls:ProgressRing State="Busy" Width="64" Height="64" Margin="348,176,179.522,175"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="BANS">
+                <Grid>
+                    <TextBlock>Product Board here.</TextBlock>
+                    <Controls:ProgressRing State="Busy" Width="64" Height="64"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="RECHERCHE JOUEUR">
+                <Grid>
+                    <Image HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Source="Properties/img/logo.png" Opacity="0.2"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Border BorderBrush="DarkOrange" BorderThickness="1" Margin="0,-33,0,0" Grid.RowSpan="2">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="5" Color="DarkOrange"/>
+            </Border.Effect>
+        </Border>
+        <Controls:ApplicationBarPanel HorizontalAlignment="Left" Height="428" Margin="646,44,0,0" VerticalAlignment="Top" Width="114" Grid.RowSpan="2"/>
+    </Grid>
+</Controls:Window>
+
+    
