@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Elysium.Notifications</name>
+  </assembly>
+  <members>
+    <member name="T:Elysium.Notifications.Animation">
+      <summary>
+        Определяет анимацию появления и исчезания уведомлений.
+      </summary>
+    </member>
+    <member name="F:Elysium.Notifications.Animation.None">
+      <summary>
+        Анимация отсутствует.
+      </summary>
+    </member>
+    <member name="F:Elysium.Notifications.Animation.Fade">
+      <summary>
+        Уведомление меняет свою прозрачность с 0% до 100%.
+      </summary>
+    </member>
+    <member name="F:Elysium.Notifications.Animation.Slide">
+      <summary>
+        Уведомление постепенно "выезжает" из-за указанного края экрана.
+      </summary>
+    </member>
+    <member name="T:Elysium.Notifications.HorizontalPlacement">
+      <summary>
+        Определяет, по какой стороне экрана выравниваются уведомления.
+      </summary>
+    </member>
+    <member name="F:Elysium.Notifications.HorizontalPlacement.Left">
+      <summary>
+        Уведомления выравниваются по левой стороне экрана.
+      </summary>
+    </member>
+    <member name="F:Elysium.Notifications.HorizontalPlacement.Right">
+      <summary>
+        Уведомления выравниваются по правой стороне экрана.
+      </summary>
+    </member>
+    <member name="T:Elysium.Notifications.NotificationManager">
+      <summary>
+        Менеджер уведомлений.
+      </summary>
+    </member>
+    <member name="M:Elysium.Notifications.NotificationManager.Push(System.String,System.String)">
+      <summary>
+        Инициирует отображение уведомления с заданными заголовком и примечанием.
+      </summary>
+      <param name="message">Заголовок уведомления.</param>
+      <param name="remark">Примечание.</param>
+      <exception cref="T:System.ArgumentException">
+        Параметер <paramref name="message" /> имеет значение null, является пустой строкой или состоит из пробелов.
+      </exception>
+      <exception cref="T:Elysium.Notifications.ServerUnavailableException">
+        Сервер уведомлений недоступен.
+      </exception>
+      <exception cref="T:Elysium.Notifications.PushNotificationFailedException">
+        Во время попытки отображения уведомления произошла неизвестная ошибка.
+      </exception>
+    </member>
+    <member name="M:Elysium.Notifications.NotificationManager.PushAsync(System.String,System.String)">
+      <summary>
+        Инициирует отображение уведомления с заданными заголовком и примечанием асинхронно.
+      </summary>
+      <param name="message">Заголовок уведомления.</param>
+      <param name="remark">Примечание.</param>
+      <returns>Экземпляр <see cref="T:System.Threading.Tasks.Task" />, который позволяет управлять потоком выполнения задачи.</returns>
+      <exception cref="T:System.ArgumentException">
+        Параметер <paramref name="message" /> имеет значение null, является пустой строкой или состоит из пробелов.
+      </exception>
+      <exception cref="T:Elysium.Notifications.ServerUnavailableException">
+        Сервер уведомлений недоступен.
+      </exception>
+      <exception cref="T:Elysium.Notifications.PushNotificationFailedException">
+        Во время попытки отображения уведомления произошла неизвестная ошибка.
+      </exception>
+    </member>
+    <member name="M:Elysium.Notifications.NotificationManager.TryPush(System.String,System.String)">
+      <summary>
+        Инициирует отображение уведомления с заданными заголовком и примечанием.
+        Возвращает значение, указывающее успешно ли выполнена операция.
+      </summary>
+      <param name="message">Заголовок уведомления.</param>
+      <param name="remark">Примечание.</param>
+      <returns>True, в случае успешного отображения уведомления, иначе False.</returns>
+      <exception cref="T:System.ArgumentException">
+        Параметер <paramref name="message" /> имеет значение null, является пустой строкой или состоит из пробелов.
+      </exception>
+    </member>
+    <member name="M:Elysium.Notifications.NotificationManager.TryPushAsync(System.String,System.String)">
+      <summary>
+        Инициирует отображение уведомления с заданными заголовком и примечанием асинхронно.
+        Возвращает значение, указывающее успешно ли выполнена операция.
+      </summary>
+      <param name="message">Заголовок уведомления.</param>
+      <param name="remark">Примечание.</param>
+      <returns>
+        Экземпляр <see cref="T:System.Threading.Tasks.Task" />, который позволяет управлять потоком выполнения задачи.
+        Значением, которое инкапсулирует <see cref="T:System.Threading.Tasks.Task" /> является True, в случае успешного отображения уведомления, иначе False.
+      </returns>
+      <exception cref="T:System.ArgumentException">
+        Параметер <paramref name="message" /> имеет значение null, является пустой строкой или состоит из пробелов.
+      </exception>
+    </member>
+    <member name="T:Elysium.Notifications.PushNotificationFailedException">
+      <summary>
+        Исключение, которое генерируется при позникновении ошибки при попытке отображения уведомления.
+      </summary>
+    </member>
+    <member name="M:Elysium.Notifications.PushNotificationFailedException.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Exception" />.</summary>
+    </member>
+    <member name="M:Elysium.Notifications.PushNotificationFailedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Exception" /> с сериализованными данными.</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />, хранящий сериализованные данные объекта, относящиеся к выдаваемому исключению.</param>
+      <param name="context">Объект <see cref="T:System.Runtime.Serialization.StreamingContext" />, содержащий контекстные сведения об источнике или назначении.</param>
+      <exception cref="T:System.ArgumentNullException">Значение параметра <paramref name="info" /> — null.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">Имя класса — null, или значение свойства <see cref="P:System.Exception.HResult" /> равно нулю (0).</exception>
+    </member>
+    <member name="M:Elysium.Notifications.PushNotificationFailedException.#ctor(System.String)">
+      <summary>Выполняет инициализацию нового экземпляра класса <see cref="T:System.Exception" />, используя указанное сообщение об ошибке.</summary>
+      <param name="message">Сообщение, описывающее ошибку.</param>
+    </member>
+    <member name="M:Elysium.Notifications.PushNotificationFailedException.#ctor(System.String,System.Exception)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Exception" /> указанным сообщением об ошибке и ссылкой на внутреннее исключение, которое стало причиной данного исключения.</summary>
+      <param name="message">Сообщение об ошибке с объяснением причин исключения.</param>
+      <param name="innerException">Исключение, вызвавшее текущее исключение, или указатель null (Nothing в Visual Basic), если внутреннее исключение не задано.</param>
+    </member>
+    <member name="T:Elysium.Notifications.ServerUnavailableException">
+      <summary>
+        Исключение, которое генерируется при позникновении ошибки при попытке соединения с сервером уведомлений.
+      </summary>
+    </member>
+    <member name="M:Elysium.Notifications.ServerUnavailableException.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Exception" />.</summary>
+    </member>
+    <member name="M:Elysium.Notifications.ServerUnavailableException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Exception" /> с сериализованными данными.</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />, хранящий сериализованные данные объекта, относящиеся к выдаваемому исключению.</param>
+      <param name="context">Объект <see cref="T:System.Runtime.Serialization.StreamingContext" />, содержащий контекстные сведения об источнике или назначении.</param>
+      <exception cref="T:System.ArgumentNullException">Значение параметра <paramref name="info" /> — null.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">Имя класса — null, или значение свойства <see cref="P:System.Exception.HResult" /> равно нулю (0).</exception>
+    </member>
+    <member name="M:Elysium.Notifications.ServerUnavailableException.#ctor(System.String)">
+      <summary>Выполняет инициализацию нового экземпляра класса <see cref="T:System.Exception" />, используя указанное сообщение об ошибке.</summary>
+      <param name="message">Сообщение, описывающее ошибку.</param>
+    </member>
+    <member name="M:Elysium.Notifications.ServerUnavailableException.#ctor(System.String,System.Exception)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Exception" /> указанным сообщением об ошибке и ссылкой на внутреннее исключение, которое стало причиной данного исключения.</summary>
+      <param name="message">Сообщение об ошибке с объяснением причин исключения.</param>
+      <param name="innerException">Исключение, вызвавшее текущее исключение, или указатель null (Nothing в Visual Basic), если внутреннее исключение не задано.</param>
+    </member>
+    <member name="T:Elysium.Notifications.VerticalPlacement">
+      <summary>
+        Определяет, по какой стороне экрана выравниваются уведомления.
+      </summary>
+    </member>
+    <member name="F:Elysium.Notifications.VerticalPlacement.Top">
+      <summary>
+        Уведомления выравнивается по верхнему краю экрана.
+      </summary>
+    </member>
+    <member name="F:Elysium.Notifications.VerticalPlacement.Bottom">
+      <summary>
+        Уведомления выравнивается по нижнему краю экрана.
+      </summary>
+    </member>
+  </members>
+</doc>
