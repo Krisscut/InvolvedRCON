@@ -51,11 +51,11 @@
   <ItemGroup>
     <Reference Include="Elysium, Version=2.0.1042.4, Culture=neutral, PublicKeyToken=afa220db249e5b15, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Elysium SDK\Elysium.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Elysium SDK\Elysium.dll</HintPath>
     </Reference>
     <Reference Include="Elysium.Notifications, Version=2.0.65.4, Culture=neutral, PublicKeyToken=afa220db249e5b15, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Elysium SDK\Elysium.Notifications.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Elysium SDK\Elysium.Notifications.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

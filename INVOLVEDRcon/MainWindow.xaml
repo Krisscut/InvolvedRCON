@@ -7,7 +7,7 @@
         params:Design.Theme="Dark" 
         params:Manager.AccentBrush= "Orange"
         params:Manager.ContrastBrush="White"
-        params:Manager.Theme="Dark" ResizeMode="CanResizeWithGrip" Title="Involved RCON" Height="593.209" Width="936.657" Icon="Properties/img/icon.ico" Margin="10,10,0,0">
+        params:Manager.Theme="Dark" ResizeMode="CanResizeWithGrip" Title="Involved RCON" Height="679.209" Width="946.657" Icon="Properties/img/icon.ico" Margin="10,10,0,0" Background="#FF171717" MinWidth="946.657" MinHeight="679.209">
     <Controls:Window.ApplicationBar>
         <Controls:ApplicationBar>
             <!-- Right Click on the UI to open Application Bar -->
@@ -22,25 +22,68 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="1" Content="?" />
+            <Image HorizontalAlignment="Center" Height="30" Margin="0" VerticalAlignment="Center" Width="130" Source="Properties/img/banner.png" Opacity="0.4"/>
         </Grid>
     </Controls:Window.TitleBar>
 
-    <Grid>
+    <Grid Margin="0,0,-8,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="98*"/>
-            <RowDefinition Height="407*"/>
+            <RowDefinition Height="127*"/>
+            <RowDefinition Height="336*"/>
+            <RowDefinition Height="164*"/>
         </Grid.RowDefinitions>
         <TabControl Grid.RowSpan="2">
             <TabItem Header="CONNEXIONS">
                 <Grid>
-                    <Image HorizontalAlignment="Center" Height="210" Margin="0" VerticalAlignment="Center" Width="787" Source="Properties/img/banner.png" Opacity="0.4"/> 
-                    <TextBlock>The Metro UI Dashboard here.</TextBlock>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="84*"/>
+                        <RowDefinition Height="93*"/>
+                        <RowDefinition Height="95*"/>
+                        <RowDefinition Height="81*"/>
+                        <RowDefinition Height="78*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="229*" MaxWidth="229"/>
+                        <ColumnDefinition Width="227*" MaxWidth="227"/>
+                        <ColumnDefinition Width="491*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="Liste des connexions" Margin="10,13,11,6" Grid.Column="0" Grid.RowSpan="5"/>
+                    <PasswordBox Margin="10" Password="Your password here" Grid.Column="2" BorderThickness="0" Grid.Row="3" Background="#FF211F1F"/>
+                    <Image HorizontalAlignment="Right" Margin="0,0,-8,5" VerticalAlignment="Bottom" Source="Properties/img/logo.png" Opacity="0.2" Height="86" Width="136" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.Row="3" Grid.RowSpan="2">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-22.588"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Grid HorizontalAlignment="Left" Height="396" Margin="0,26,0,0" VerticalAlignment="Top" Width="226" Grid.RowSpan="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="107*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="+ Nouvelle Connexion" Margin="34,16,20,309"/>
+                    </Grid>
+                    <Label Content="NOM DE LA CONNEXION" Grid.Column="1" HorizontalAlignment="Left" Height="60" Margin="10,13,0,0" VerticalAlignment="Top" Width="207" params:Manager.Theme="Dark" FontWeight="Bold" params:Design.Theme="Dark" Background="{x:Null}" Foreground="#FFD36A02" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Trebuchet MS"/>
+                    <Label Content="ADRESSE -IP&#xD;&#xA;ou&#xD;&#xA;NOM DE DOMAINE" Grid.Column="1" HorizontalAlignment="Left" Height="73" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="207" params:Manager.Theme="Dark" FontWeight="Bold" params:Design.Theme="Dark" Background="{x:Null}" Foreground="#FFD36A02" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Trebuchet MS"/>
+                    <Label Content="PORT" Grid.Column="1" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="207" params:Manager.Theme="Dark" FontWeight="Bold" params:Design.Theme="Dark" Background="{x:Null}" Foreground="#FFD36A02" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Trebuchet MS"/>
+                    <Label Content="MOT DE PASSE RCON" Grid.Column="1" HorizontalAlignment="Left" Height="61" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="207" params:Manager.Theme="Dark" FontWeight="Bold" params:Design.Theme="Dark" Background="{x:Null}" Foreground="#FFD36A02" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Trebuchet MS"/>
+                    <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="64" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="471"/>
+                    <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="64" Margin="10,10,0,0" TextWrapping="Wrap" Text="Maconnexion" VerticalAlignment="Top" Width="471" Background="#FF211F1F" BorderThickness="0"/>
+                    <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="73" Margin="10,10,0,0" TextWrapping="Wrap" Text="62.512.40.10" VerticalAlignment="Top" Width="471" Background="#FF211F1F" BorderThickness="0" Grid.Row="1"/>
+                    <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" TextWrapping="Wrap" Text="2305" VerticalAlignment="Top" Width="471" Background="#FF211F1F" BorderThickness="0" Grid.Row="2"/>
+                    <Button Content="Sauvegarder" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="22,25,0,0" Grid.Row="4" VerticalAlignment="Top" Width="136" Padding="0" ScrollViewer.CanContentScroll="True"/>
+                    <Button Content="Effacer" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="213,25,0,0" Grid.Row="4" VerticalAlignment="Top" Width="136" Padding="0" ScrollViewer.CanContentScroll="True" Background="#FFAA2A0E"/>
+                    <Button Content="Connexion" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="50,25,0,0" Grid.Row="4" VerticalAlignment="Top" Width="136" Padding="0" ScrollViewer.CanContentScroll="True" Background="#FFFF8B00"/>
                 </Grid>
             </TabItem>
             <TabItem Header="MONITORING">
                 <Grid>
-                    <TextBlock>Sales Board here.</TextBlock>
+                    <TextBlock Margin="0,0,109,293"><Run Text="Sales Board here."/></TextBlock>
                     <Controls:ProgressRing State="Indeterminate" Width="64" Height="64"/>
+                    <DataGrid HorizontalAlignment="Left" Height="150" Margin="133,162,0,0" VerticalAlignment="Top" Width="215"/>
                 </Grid>
             </TabItem>
             <TabItem Header="LISTE DES JOUEURS">
@@ -60,18 +103,28 @@
                     <Controls:ProgressRing State="Busy" Width="64" Height="64"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="RECHERCHE JOUEUR">
+            <TabItem Header="RECHERCHER JOUEUR">
                 <Grid>
                     <Image HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Source="Properties/img/logo.png" Opacity="0.2"/>
+                    <Controls:ProgressBar Height="Auto"/>
                 </Grid>
             </TabItem>
+
         </TabControl>
-        <Border BorderBrush="DarkOrange" BorderThickness="1" Margin="0,-33,0,0" Grid.RowSpan="2">
+        <RichTextBox Grid.Row="2" Background="Black" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Center" MinWidth="947" IsEnabled="False">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Language="fr-fr" Text="SORTIE CONSOLE ET INFORMATIONS APPLICATION"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+        <!--
+       <Border BorderBrush="DarkOrange" BorderThickness="1" Margin="0,-33,0,0" Grid.RowSpan="2">
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="5" Color="DarkOrange"/>
             </Border.Effect>
-        </Border>
-        <Controls:ApplicationBarPanel HorizontalAlignment="Left" Height="428" Margin="646,44,0,0" VerticalAlignment="Top" Width="114" Grid.RowSpan="2"/>
+        </Border> -->
     </Grid>
 </Controls:Window>
 
