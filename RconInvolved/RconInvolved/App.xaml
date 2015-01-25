@@ -6,4 +6,5 @@
                           StartupUri="MainWindow.xaml"
                           AccentColor="DarkOrange"
                           ContrastColor="DarkOrange"
+                          Exit="AppExiting"
                           />

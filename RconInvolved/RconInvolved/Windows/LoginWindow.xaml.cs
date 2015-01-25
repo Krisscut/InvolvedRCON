@@ -20,6 +20,13 @@ namespace RconInvolved.Windows
             InitializeComponent();
             this.Style = (Style)this.FindResource("BackgroundFadeWindowStyle");
             this.DataContext = new ServersDataViewModel();
+            this.Loaded += new RoutedEventHandler(MainWindow_Loaded);
+            Console.WriteLine("Initializing");
+        }
+
+        void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("KIKOO");
         }
 
         public void NewConnexionClick(object sender, RoutedEventArgs e)
