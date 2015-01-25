@@ -1,0 +1,27 @@
+﻿<extra:Window
+              x:Class="RconInvolved.MainWindow"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:extra="http://schemas.extra.com/ui"
+              xmlns:metro="http://schemas.codeplex.com/elysium"
+              xmlns:params="http://schemas.codeplex.com/elysium/params"
+              xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" 
+              Height="350" 
+              Title="InvolvedRCON" 
+              Width="525" WindowStyle="None" IsBusy="True" HasDropShadow="True" AllowsTransparency="True" Icon="Assets/favicon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" TaskbarIsBusy="True" TitleBarVisibility="Collapsed"
+               >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="129*"/>
+            <RowDefinition Height="46*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <extra:LoadingContent x:Name="loadingBarSplashScreen"
+                              Grid.Row="1" 
+                              IsContentLoaded="False" Header="C h a r g e m e n t" Content=""/>
+        <Image x:Name="SplashScreen" Source="Assets/splashscreen.png"/>
+    </Grid>
+</extra:Window>
