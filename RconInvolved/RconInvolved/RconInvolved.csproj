@@ -26,10 +26,12 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://krisscut.legtux.org/applications/RconInvolved/deployment/</InstallUrl>
     <SupportUrl>http://feedback.involved-gaming.com/my_view_page.php</SupportUrl>
+    <ProductName>RconInvolved</ProductName>
+    <PublisherName>Krisscut</PublisherName>
     <SuiteName>Involved Tools</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
-    <WebPage>myWebDeploymentPage</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <WebPage>myWebDeploymentPage.html</WebPage>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
