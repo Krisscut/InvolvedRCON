@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/logo_transparents_couleurs.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("favicon.ico")]
 
 

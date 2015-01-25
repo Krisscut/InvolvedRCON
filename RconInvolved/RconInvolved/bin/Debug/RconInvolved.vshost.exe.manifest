@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="RconInvolved.exe" version="0.1.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="RconInvolved.exe" version="0.1.0.9" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="favicon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="RconInvolved" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -234,14 +235,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RconInvolved.exe" size="94720">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RconInvolved.exe" size="205824">
       <assemblyIdentity name="RconInvolved" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3/ATLv41ZydG91aqvrATdsXkCR8bSquTI7C2J9stpiM=</dsig:DigestValue>
+        <dsig:DigestValue>9kXtahGG/bhqJEUiqygD/Gh56VTRwF/oUSpqkpcarwY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -353,6 +354,15 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="favicon.ico" size="32988">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2bb606372jcuwqW2tbgN8KK0iFr3HCw9ZSj5WzeljIE=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="RconInvolved.exe.config" size="2175">
     <hash>
       <dsig:Transforms>

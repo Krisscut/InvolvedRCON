@@ -19,12 +19,13 @@ namespace RconInvolved.DataPersistance
         public Configuration() {
             Console.WriteLine("Configuration File Initialization");
             Console.WriteLine(CONFIGURATION_FILE_PATH);
-
+            /*
             if (!GenerateConfFile())
             {
                 Console.WriteLine("Reading configuration File");
                 LoadConfigurationFile();
             }
+             * */
         }
 
         protected bool GenerateConfFile(){
@@ -42,7 +43,7 @@ namespace RconInvolved.DataPersistance
         }
 
         protected void LoadConfigurationFile() {
-            var xdoc = XDocument.Load(CONFIGURATION_FILE_PATH + CONFIGURATION_FILENAME);
+            //var xdoc = XDocument.Load(CONFIGURATION_FILE_PATH + CONFIGURATION_FILENAME);
             /*
             _dictionary = xdoc.Descendants("data")
                   .ToDictionary(d => (string)d.Attribute("name"),
