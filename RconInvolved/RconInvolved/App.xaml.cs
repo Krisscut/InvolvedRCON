@@ -8,12 +8,10 @@ namespace RconInvolved
     /// </summary>
     public partial class App
     {
-        public Configuration conf;
-
         public App()
         {
             Console.WriteLine("App is launching");
-            conf = new Configuration();
+            Configuration.Initialize();
         }
 
         protected void AppExiting(object sender, EventArgs e)

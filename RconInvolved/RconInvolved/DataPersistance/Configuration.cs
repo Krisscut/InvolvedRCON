@@ -9,26 +9,26 @@ using RconInvolved.Models;
 
 namespace RconInvolved.DataPersistance
 {
-    public class Configuration
+    public static class Configuration
     {
-        private static String CONFIGURATION_FILE_PATH = AppDomain.CurrentDomain.BaseDirectory + "Datas/Conf/";
-        private static String CONFIGURATION_FILENAME = "RconInvolved.conf";
+        public static String CONFIGURATION_FILE_PATH = AppDomain.CurrentDomain.BaseDirectory + "Datas/Conf/";
+        public static String CONFIGURATION_FILENAME = "RconInvolved.conf";
+        public static XDocument xmlConfigFile;
 
-        private Dictionary<String, Dictionary<String, String>> myVar;
+        public static Dictionary<String, Dictionary<String, String>> myVar;
 
-        public Configuration() {
+        public static void Initialize () {
             Console.WriteLine("Configuration File Initialization");
             Console.WriteLine(CONFIGURATION_FILE_PATH);
-            /*
+            
             if (!GenerateConfFile())
             {
                 Console.WriteLine("Reading configuration File");
                 LoadConfigurationFile();
             }
-             * */
         }
 
-        protected bool GenerateConfFile(){
+        public static bool GenerateConfFile() {
             //Generates Conf directory
             bool exists = Directory.Exists(CONFIGURATION_FILE_PATH);
             if (!exists) Directory.CreateDirectory(CONFIGURATION_FILE_PATH);
@@ -37,28 +37,41 @@ namespace RconInvolved.DataPersistance
             if (!exists)
             {
                 File.Create(CONFIGURATION_FILE_PATH + CONFIGURATION_FILENAME);
+                
+                //Create basic tree structure
+                xmlConfigFile = new XDocument();
                 return true;
             }
             return false;
         }
 
-        protected void LoadConfigurationFile() {
-            //var xdoc = XDocument.Load(CONFIGURATION_FILE_PATH + CONFIGURATION_FILENAME);
-            /*
-            _dictionary = xdoc.Descendants("data")
-                  .ToDictionary(d => (string)d.Attribute("name"),
-                                d => (string)d);
-                              
-            */
-
-
+        public static void LoadConfigurationFile() {
+            xmlConfigFile = XDocument.Load(CONFIGURATION_FILE_PATH + CONFIGURATION_FILENAME);
         }
 
-
-        public void SaveConfiguration()
+        public static XElement GetRootElementByName(String name)
         {
+            return xmlConfigFile.Element(name);
+        }
 
+        public static void ReplaceRootElement(XElement element)
+        {
+            XElement oldElement = xmlConfigFile.Element(element.Name);
+            if (oldElement != null)
+            {
+                oldElement.ReplaceWith(element);
+            }
+            else
+            {
+                xmlConfigFile.Add(element);
+            }
+            //Update root element to old it in case of crash
+            SaveConfiguration();
+        }
 
+        public static void SaveConfiguration()
+        {
+            xmlConfigFile.Save(CONFIGURATION_FILE_PATH + CONFIGURATION_FILENAME);
         }
     }
 }
