@@ -6,10 +6,9 @@
                      xmlns:metro="http://schemas.codeplex.com/elysium"
                      xmlns:params="http://schemas.codeplex.com/elysium/params"
                      xmlns:extra="http://schemas.extra.com/ui"
-                     mc:Ignorable="d" 
-                     d:DesignHeight="768" d:DesignWidth="1024"
-                     Title="This title only visible if TitleBarVisibility = Visible (Collapsed by default)">
-    <Grid>
+                     mc:Ignorable="d"
+                     Title="This title only visible if TitleBarVisibility = Visible (Collapsed by default)" Height="411.05" Width="1035">
+    <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
@@ -39,205 +38,117 @@
 
         <TextBlock Grid.Column="1"
                    Grid.Row="1"  
-                   Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                   Margin="{Binding Converter={StaticResource DoubleToThicknessConverter}, ConverterParameter='Left, Top, Right', RelativeSource={RelativeSource Self}, Path=(params:General.BoldPaddingValue), Mode=OneWay}"
+                   Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
+                   Margin="{Binding (params:General.BoldPaddingValue), ConverterParameter=Left\, Top\, Right, Converter={StaticResource DoubleToThicknessConverter}, Mode=OneWay, RelativeSource={RelativeSource Self}}"
                    Style="{StaticResource HeaderTextStyle}" 
-                   Text="Title"/>
+                   ><Run Language="fr-fr" Text="Creation d'un profil serveur"/></TextBlock>
 
         <TextBlock Grid.Column="1"
                    Grid.Row="2"  
-                   Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                   Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                   Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
+                   Margin="{Binding (params:General.BoldPadding), Mode=OneWay, RelativeSource={RelativeSource Self}}"
                    Style="{StaticResource NormalTextStyle}" 
-                   Text="Content Content Content Content Content Content Content Content Content Content."/>
+                   TextWrapping="Wrap"
+                   ><Run Language="fr-fr" Text="Ce menu vous permet de creer un nouveau profil de serveur pour une connexion plus rapide lors de la prochaine utilisation."/></TextBlock>
 
 
         <StackPanel Grid.Column="1" 
-                    Grid.Row="3">
+                    Grid.Row="3"  VerticalAlignment="Top">
             <TextBlock Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
                        Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
                        Style="{StaticResource HeaderTextStyle}" 
-                       Text="Standard Window Properties"/>
+                       Text="Informations"/>
             <Grid>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Label Content="HorizontalContentAlignment"
+                <Label Content="Nom du profil"
                        Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
                        Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=HorizontalContentAlignmentComboBox}"/>
-                <ComboBox x:Name="HorizontalContentAlignmentComboBox" 
-                          Grid.Column="1"
-                          Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                          SelectedItem="{Binding Path=HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType=extra:OverlayWindow}}">
-                    <HorizontalAlignment>Left</HorizontalAlignment>
-                    <HorizontalAlignment>Right</HorizontalAlignment>
-                    <HorizontalAlignment>Center</HorizontalAlignment>
-                    <HorizontalAlignment>Stretch</HorizontalAlignment>
-                </ComboBox>
+                       Target="{Binding ElementName=HorizontalContentAlignmentComboBox}" HorizontalAlignment="Left"/>
+
+                <TextBox x:Name="ProfilNameValue" 
+                         Grid.Column="1" 
+                         Grid.ColumnSpan="3"
+                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                         Text=""
+                         VerticalAlignment="Center"/>
 
                 <Label Grid.Row="1" 
-                       Content="VerticalContentAlignment"
+                       Content="Nom d'hôte ou IP"
                        Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=VerticalContentAlignmentComboBox}"/>
-                <ComboBox x:Name="VerticalContentAlignmentComboBox" 
-                          Grid.Column="1"
-                          Grid.Row="1" 
-                          Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                          SelectedItem="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorType=extra:OverlayWindow}}">
-                    <VerticalAlignment>Top</VerticalAlignment>
-                    <VerticalAlignment>Bottom</VerticalAlignment>
-                    <VerticalAlignment>Center</VerticalAlignment>
-                    <VerticalAlignment>Stretch</VerticalAlignment>
-                </ComboBox>
-
+                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}" HorizontalAlignment="Left"
+                       />
+                <TextBox x:Name="HostnameValue"
+                         Grid.Row="1" 
+                         Grid.Column="1" 
+                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                         Text=""
+                         VerticalAlignment="Center"/>
+                <Label Grid.Row="1" 
+                       Grid.Column="2" 
+                       Content="Port"
+                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
+                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}" HorizontalAlignment="Center"
+                       />
+                <TextBox x:Name="PortValue"
+                         Grid.Row="1" 
+                         Grid.Column="3" 
+                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                         Text=""
+                         VerticalAlignment="Center"/>
+                <Label Grid.Row="2" 
+                       Grid.ColumnSpan="2"
+                       Content="Mot de passe"
+                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
+                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}" HorizontalAlignment="Left"
+                       />
+                <PasswordBox  x:Name="PasswordValue" 
+                         Grid.Row="2" 
+                         Grid.Column="1" 
+                         Grid.ColumnSpan="3"
+                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                         VerticalAlignment="Center"/>
             </Grid>
 
-            <TextBlock Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+            <TextBlock Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
+                       Margin="{Binding (params:General.BoldPadding), Mode=OneWay, RelativeSource={RelativeSource Self}}"
                        Style="{StaticResource HeaderTextStyle}" 
-                       Text="Custom Window Properties"/>
-            <TextBlock Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                       ><Run Language="fr-fr" Text="Autre propriétés"/></TextBlock>
+            <TextBlock Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
+                       Margin="{Binding (params:General.BoldPadding), Mode=OneWay, RelativeSource={RelativeSource Self}}"
                        Style="{StaticResource NormalTextStyle}" 
-                       Text="OverlayWindow has many of the same properties as the Window class (See Window tab). Here are just the most useful ones."/>
+                       ><Run Language="fr-fr" Text="Les autre informations nécessaires au fonctionnement du RCON."/></TextBlock>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="43*"/>
+                    <ColumnDefinition Width="68*"/>
+                    <ColumnDefinition Width="111*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Label Content="IsOverlayVisible"
+                <Label
+                       Content="Auto-connexion"
                        Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=IsOverlayVisibleToggleSwitch}"/>
-                <metro:ToggleSwitch x:Name="IsOverlayVisibleToggleSwitch" 
-                                    Grid.Column="1"
-                                    HorizontalAlignment="Left"
-                                    IsChecked="{Binding Path=IsOverlayVisible, RelativeSource={RelativeSource AncestorType=extra:OverlayWindow}}"
-                                    Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"/>
+                       Margin="119,6" ToolTip="Auto-connexion lorsque ce profil est selectionné?" HorizontalAlignment="Center" Grid.ColumnSpan="2"
+                       />
 
-                <Label Grid.Row="1" 
-                       Content="OverlayBackground"
-                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=OverlayBackgroundTextBox}"/>
-                <TextBox x:Name="OverlayBackgroundTextBox" 
-                         Grid.Column="1"
-                         Grid.Row="1" 
-                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                         Text="{Binding Path=OverlayBackground, RelativeSource={RelativeSource AncestorType=extra:OverlayWindow}}"
-                         VerticalAlignment="Center"/>
-
-                <Label Grid.Row="2" 
-                       Content="OverlayBorderBrush"
-                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=OverlayBorderBrushTextBox}"/>
-                <TextBox x:Name="OverlayBorderBrushTextBox" 
-                         Grid.Column="1"
-                         Grid.Row="2" 
-                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                         Text="{Binding Path=OverlayBorderBrush, RelativeSource={RelativeSource AncestorType=extra:OverlayWindow}}"
-                         VerticalAlignment="Center"/>
-
-                <Label Grid.Row="3" 
-                       Content="OverlayBorderThickness"
-                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=OverlayBorderThicknessTextBox}"/>
-                <TextBox x:Name="OverlayBorderThicknessTextBox" 
-                         Grid.Column="1"
-                         Grid.Row="3" 
-                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                         Text="{Binding Path=OverlayBorderThickness, RelativeSource={RelativeSource AncestorType=extra:OverlayWindow}}"
-                         VerticalAlignment="Center"/>
-
-                <Label Grid.Row="4" 
-                       Content="OverlayMargin"
-                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=OverlayMarginTextBox}"/>
-                <TextBox x:Name="OverlayMarginTextBox" 
-                         Grid.Column="1"
-                         Grid.Row="4" 
-                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                         Text="{Binding Path=OverlayMargin, RelativeSource={RelativeSource AncestorType=extra:OverlayWindow}}"
-                         VerticalAlignment="Center"/>
-
-                <Label Grid.Row="5" 
-                       Content="OverlayOpacity"
-                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=OverlayOpacityTextBox}"/>
-                <TextBox x:Name="OverlayOpacityTextBox" 
-                         Grid.Column="1"
-                         Grid.Row="5" 
-                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                         Text="{Binding Path=OverlayOpacity, RelativeSource={RelativeSource AncestorType=extra:OverlayWindow}}"
-                         VerticalAlignment="Center"/>
-
-                <Label Grid.Column="2" 
-                       Content="IsBusy"
-                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=IsBusyToggleSwitch}"/>
-                <metro:ToggleSwitch x:Name="IsBusyToggleSwitch" 
-                                    Grid.Column="3"
-                                    IsChecked="{Binding Path=IsBusy, RelativeSource={RelativeSource AncestorType=extra:OverlayWindow}}"
-                                    Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"/>
-
-                <Label Grid.Column="2" 
-                       Grid.Row="1" 
-                       Content="Progress"
-                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=ProgressDoubleUpDown}"/>
-                <extra:DoubleUpDown x:Name="ProgressDoubleUpDown" 
-                                    Grid.Column="3"
-                                    Grid.Row="1" 
-                                    AllowSpin="True"
-                                    Increment="10"
-                                    Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                                    Maximum="100"
-                                    Minimum="0"
-                                    ShowButtonSpinner="True"
-                                    Value="{Binding Path=Progress, RelativeSource={RelativeSource AncestorType=extra:OverlayWindow}}"/>
-
-                <Label Grid.Column="2" 
-                       Grid.Row="2" 
-                       Content="TitleBarVisibility"
-                       Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                       Target="{Binding ElementName=TitleBarVisibilityComboBox}"/>
-                <ComboBox x:Name="TitleBarVisibilityComboBox" 
-                          Grid.Column="3"
-                          Grid.Row="2" 
-                          Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                          SelectedItem="{Binding Path=TitleBarVisibility, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}">
-                    <Visibility>Visible</Visibility>
-                    <Visibility>Hidden</Visibility>
-                    <Visibility>Collapsed</Visibility>
-                </ComboBox>
+                <metro:ToggleSwitch x:Name="AutoReconnect" 
+                                    Grid.Column="2"
+                                    HorizontalAlignment="Center"
+                                    IsChecked="False"
+                                    Margin="143,11,142,11" ToolTip="Auto-connexion lorsque ce profil est selectionné?"/>
 
             </Grid>
         </StackPanel>

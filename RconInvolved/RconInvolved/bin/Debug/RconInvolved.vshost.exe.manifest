@@ -43,6 +43,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BattleNET.dll" size="18944">
+      <assemblyIdentity name="BattleNET" version="1.3.1.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>8JT0XvW00FOTSRW74OZItBlpyHXeFK/Hz8dSDQzHKcs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Elysium.dll" size="553688">
       <assemblyIdentity name="Elysium" version="2.0.1042.4" publicKeyToken="AFA220DB249E5B15" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -235,14 +247,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RconInvolved.exe" size="206848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RconInvolved.exe" size="202240">
       <assemblyIdentity name="RconInvolved" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4R/8jgFdNkZvIGXd5vsbVpJO0ZI7AYPXoG8YgShHcJs=</dsig:DigestValue>
+        <dsig:DigestValue>BFrXwjpn7eLlO/ZwnOVdKf3dE6seClL3invB5fKttrg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

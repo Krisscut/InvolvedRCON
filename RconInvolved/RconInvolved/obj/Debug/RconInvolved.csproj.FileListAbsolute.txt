@@ -165,3 +165,5 @@ D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\Rcon
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved.TrustInfo.xml
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved.exe.manifest
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved.application
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\BattleNET.dll
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\BattleNET.pdb

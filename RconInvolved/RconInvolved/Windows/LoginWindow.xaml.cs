@@ -10,6 +10,7 @@ namespace RconInvolved.Windows
     using System.Xml.Linq;
     using RconInvolved.DataPersistance;
     using System.ComponentModel;
+    using BattleNET;
     /// <summary>
     /// Logique d'interaction pour LoginWindow.xaml
     /// </summary>
@@ -35,6 +36,7 @@ namespace RconInvolved.Windows
                 Source = new Uri("/Framework.UI;component/Themes/ElysiumExtra/GeometryIcon.xaml", UriKind.RelativeOrAbsolute)
             };
 
+            BattlEyeLoginCredentials loginCredentials = new BattlEyeLoginCredentials();
         }
 
         #region ConfigurationFile
