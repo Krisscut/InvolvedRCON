@@ -1,0 +1,74 @@
+*DEBUG      2015-01-28 22:43:54,636        MonitoringLogger          Test Logging 
+*DEBUG      2015-01-28 22:43:54,758        MonitoringLogger          Monitoring logger 
+*DEBUG      2015-01-28 22:44:56,603        MonitoringLogger          Test Logging 
+*DEBUG      2015-01-28 22:44:56,794        MonitoringLogger          Monitoring logger 
+[DEBUG     ] - 2015-01-28 22:47:22,679 - MonitoringLogger - Test Logging 
+[DEBUG     ] - 2015-01-28 22:47:22,709 - MonitoringLogger - Monitoring logger 
+[DEBUG] - [11] - 2015-01-28 22:52:16,752 - MonitoringLogger - Main_App - Test Logging 
+[DEBUG] - [11] - 2015-01-28 22:52:16,779 - MonitoringLogger - Main_App - Monitoring logger 
+[INFO] - [9] - 2015-01-28 23:02:32,570 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [9] - 2015-01-28 23:02:32,596 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[DEBUG] - [9] - 2015-01-28 23:02:38,002 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [9] - 2015-01-28 23:02:38,834 - MonitoringLogger - Rcon_Involved - Login window loaded 
+[INFO] - [10] - 2015-01-28 23:06:21,308 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-01-28 23:06:21,342 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[DEBUG] - [10] - 2015-01-28 23:06:26,928 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-01-28 23:06:27,731 - MonitoringLogger - Rcon_Involved - Login window loaded 
+[ERROR] - [10] - 2015-01-28 23:06:38,220 - MonitoringLogger - Rcon_Involved - Exception Throwed in CreateConnectionOverlay ! 
+[ERROR] - [10] - 2015-01-28 23:06:40,096 - MonitoringLogger - Rcon_Involved - Exception Throwed in CreateConnectionOverlay ! 
+[ERROR] - [10] - 2015-01-28 23:06:40,657 - MonitoringLogger - Rcon_Involved - Exception Throwed in CreateConnectionOverlay ! 
+[ERROR] - [10] - 2015-01-28 23:06:40,859 - MonitoringLogger - Rcon_Involved - Exception Throwed in CreateConnectionOverlay ! 
+[DEBUG] - [10] - 2015-01-28 23:06:55,719 - MonitoringLogger - Rcon_Involved - Login window closed 
+[INFO] - [8] - 2015-01-28 23:12:26,625 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [8] - 2015-01-28 23:12:26,652 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[DEBUG] - [8] - 2015-01-28 23:12:32,048 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [8] - 2015-01-28 23:12:32,903 - MonitoringLogger - Rcon_Involved - Login window loaded 
+[ERROR] - [8] - 2015-01-28 23:12:37,914 - MonitoringLogger - Rcon_Involved - Exception Throwed in CreateConnectionOverlay ! 
+[DEBUG] - [8] - 2015-01-28 23:12:43,308 - MonitoringLogger - Rcon_Involved - Login window closed 
+[INFO] - [11] - 2015-01-28 23:15:52,306 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [11] - 2015-01-28 23:15:52,335 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [10] - 2015-01-28 23:19:22,892 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-01-28 23:19:22,919 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [10] - 2015-01-28 23:21:23,289 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-01-28 23:21:23,413 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [9] - 2015-01-28 23:22:14,722 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [9] - 2015-01-28 23:22:14,747 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [9] - 2015-01-28 23:22:55,359 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [9] - 2015-01-28 23:22:55,482 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[DEBUG] - [9] - 2015-01-28 23:23:01,004 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [9] - 2015-01-28 23:23:01,912 - MonitoringLogger - Rcon_Involved - Login window loaded 
+[DEBUG] - [9] - 2015-01-28 23:23:03,972 - MonitoringLogger - Rcon_Involved - Login window closed 
+[INFO] - [9] - 2015-01-28 23:23:03,984 - MonitoringLogger - Rcon_Involved - RconInvolved is closing, see you ! 
+[INFO] - [10] - 2015-01-28 23:23:14,898 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-01-28 23:23:14,925 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[DEBUG] - [10] - 2015-01-28 23:23:20,339 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-01-28 23:23:21,204 - MonitoringLogger - Rcon_Involved - Login window loaded 
+[DEBUG] - [10] - 2015-01-28 23:23:24,528 - MonitoringLogger - Rcon_Involved - Login window closed 
+[INFO] - [10] - 2015-01-28 23:23:24,536 - MonitoringLogger - Rcon_Involved - RconInvolved is closing, see you ! 
+[INFO] - [10] - 2015-01-28 23:23:28,627 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-01-28 23:23:28,654 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[DEBUG] - [10] - 2015-01-28 23:23:34,099 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-01-28 23:23:34,930 - MonitoringLogger - Rcon_Involved - Login window loaded 
+[DEBUG] - [10] - 2015-01-28 23:23:38,626 - MonitoringLogger - Rcon_Involved - Login window closed 
+[INFO] - [10] - 2015-01-28 23:23:38,642 - MonitoringLogger - Rcon_Involved - RconInvolved is closing, see you ! 
+[INFO] - [10] - 2015-01-28 23:27:13,948 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-01-28 23:27:13,975 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[DEBUG] - [10] - 2015-01-28 23:27:19,426 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-01-28 23:27:20,246 - MonitoringLogger - Rcon_Involved - Login window loaded 
+[ERROR] - [10] - 2015-01-28 23:27:33,741 - MonitoringLogger - Rcon_Involved - Exception Throwed in CreateConnectionOverlay ! 
+[ERROR] - [10] - 2015-01-28 23:27:43,579 - MonitoringLogger - Rcon_Involved - Exception Throwed in CreateConnectionOverlay ! 
+[DEBUG] - [10] - 2015-01-28 23:27:58,212 - MonitoringLogger - Rcon_Involved - Login window closed 
+[INFO] - [10] - 2015-01-28 23:27:58,230 - MonitoringLogger - Rcon_Involved - RconInvolved is closing, see you ! 
+[INFO] - [11] - 2015-01-28 23:41:13,268 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [11] - 2015-01-28 23:41:13,296 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[DEBUG] - [11] - 2015-01-28 23:41:18,763 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [11] - 2015-01-28 23:41:19,669 - MonitoringLogger - Rcon_Involved - Login window loaded 
+[DEBUG] - [11] - 2015-01-28 23:41:32,916 - MonitoringLogger - Rcon_Involved - Login window closed 
+[INFO] - [11] - 2015-01-28 23:41:32,929 - MonitoringLogger - Rcon_Involved - RconInvolved is closing, see you ! 
+[INFO] - [9] - 2015-01-28 23:59:21,308 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [9] - 2015-01-28 23:59:21,335 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [9] - 2015-01-28 23:59:21,336 - MonitoringLogger - Rcon_Involved - Configuration FIle path : D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Datas/Conf/ 
+[DEBUG] - [9] - 2015-01-28 23:59:26,819 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [9] - 2015-01-28 23:59:27,754 - MonitoringLogger - Rcon_Involved - Login window loaded 
+[DEBUG] - [9] - 2015-01-28 23:59:38,558 - MonitoringLogger - Rcon_Involved - Login window closed 
+[INFO] - [9] - 2015-01-28 23:59:38,578 - MonitoringLogger - Rcon_Involved - RconInvolved is closing, see you ! 

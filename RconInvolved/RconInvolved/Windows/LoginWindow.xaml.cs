@@ -11,21 +11,25 @@ namespace RconInvolved.Windows
     using RconInvolved.DataPersistance;
     using System.ComponentModel;
     using BattleNET;
+    using System.Windows.Media;
+    using RconInvolved.Utils;
     /// <summary>
     /// Logique d'interaction pour LoginWindow.xaml
     /// </summary>
     public partial class LoginWindow
     {
         private static string WINDOW_NAME = "LoginWindow";
-        //private readonly Collectio servers;
-        //private readonly AsyncDelegateCommand pinCommand;
+        private LoginWindowDataViewModel loginDataView = new LoginWindowDataViewModel();
 
         public LoginWindow()
         {
-            Console.WriteLine("Initializing LoginWindow");
+            Logger.MonitoringLogger.Debug("Initializing LoginWindow");
             InitializeComponent();
-            this.Style = (Style)this.FindResource("AccentTitleBarWindowStyle");
-            this.DataContext = new ServersDataViewModel();
+
+            var converter = new System.Windows.Media.BrushConverter();
+            var brush = (Brush)converter.ConvertFromString("#404040");
+            this.TitleBarBackground = brush;
+            this.DataContext = loginDataView;
 
             //Event handler
             this.Loaded += new RoutedEventHandler(LoadedEventHandler);
@@ -64,22 +68,20 @@ namespace RconInvolved.Windows
         #region WindowsEvents
         void ClosedEventHandler(object sender, CancelEventArgs e)
         {
-            Console.WriteLine("Login window closed");
+            Logger.MonitoringLogger.Debug("Login window closed");
             SaveToConfigurationFile();
         }
 
         void LoadedEventHandler(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Login window loaded");
+            Logger.MonitoringLogger.Debug("Login window loaded");
             LoadFromConfigurationFile();
         }
         #endregion WindowsEvents
 
-
-
         public void NewConnexionClick(object sender, RoutedEventArgs e)
         {
-            CreateConnectionOverlayView window = new CreateConnectionOverlayView(this, Window.GetWindow(this));
+            CreateConnectionOverlayView window = new CreateConnectionOverlayView(this, Window.GetWindow(this), loginDataView);
             this.TaskbarProgressState = System.Windows.Shell.TaskbarItemProgressState.Paused;
             this.TaskbarProgressValue = 50;
             //this.TaskbarIsBusy = true;
@@ -99,6 +101,23 @@ namespace RconInvolved.Windows
         public void DonateClick(object sender, RoutedEventArgs e)
         {
             Process.Start("http://www.google.fr");
+        }
+
+        private void ListBoxServers_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListBoxServers_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (this.loginDataView.ServersProfiles.Count != 0)
+            {
+                this.MaskList.Text = "";
+            }
+            else
+            {
+                this.MaskList.Text = "Pas de profil";
+            }
         }
     }
 }

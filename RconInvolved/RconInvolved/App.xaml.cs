@@ -1,5 +1,7 @@
 ﻿using System;
 using RconInvolved.DataPersistance;
+using RconInvolved.Utils;
+
 
 namespace RconInvolved
 {
@@ -10,13 +12,15 @@ namespace RconInvolved
     {
         public App()
         {
-            Console.WriteLine("App is launching");
+            log4net.ThreadContext.Properties["log_who"] = "Rcon_Involved";
+            Logger.MonitoringLogger.Info("RconInvolved is starting");
             Configuration.Initialize();
+            SQLiteDatabase.Initialize();
         }
 
         protected void AppExiting(object sender, EventArgs e)
         {
-            Console.WriteLine("App is closing");
+            Logger.MonitoringLogger.Info("RconInvolved is closing, see you !");
         }
     }
 

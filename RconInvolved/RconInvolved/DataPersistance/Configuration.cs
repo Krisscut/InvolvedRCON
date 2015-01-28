@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using RconInvolved.Models;
+using RconInvolved.Utils;
 
 namespace RconInvolved.DataPersistance
 {
@@ -18,8 +19,8 @@ namespace RconInvolved.DataPersistance
         public static Dictionary<String, Dictionary<String, String>> myVar;
 
         public static void Initialize () {
-            Console.WriteLine("Configuration File Initialization");
-            Console.WriteLine(CONFIGURATION_FILE_PATH);
+            Logger.MonitoringLogger.Info("Configuration File Initialization");
+            Logger.MonitoringLogger.Info("Configuration FIle path : " + CONFIGURATION_FILE_PATH);
             
             if (!GenerateConfFile())
             {

@@ -5,20 +5,20 @@
     using Framework.UI.Input;
     using RconInvolved.Models;
 
-    public sealed class ServersDataViewModel
+    public sealed class LoginWindowDataViewModel
     {
-        private readonly ServerCollection servers;
-        private readonly AsyncDelegateCommand pinCommand;
+        private  ServerProfileCollection serversProfiles;
+        private  AsyncDelegateCommand pinCommand;
 
-        public ServersDataViewModel()
+        public LoginWindowDataViewModel()
         {
-            this.servers = new ServerCollection();
+            this.serversProfiles = new ServerProfileCollection();
             this.pinCommand = new AsyncDelegateCommand(this.Pin);
         }
 
-        public ServerCollection Servers
+        public ServerProfileCollection ServersProfiles
         {
-            get { return this.servers; }
+            get { return this.serversProfiles; }
         }
 
         public AsyncDelegateCommand PinCommand

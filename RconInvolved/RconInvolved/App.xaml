@@ -5,6 +5,6 @@
                           Theme="Dark"
                           StartupUri="MainWindow.xaml"
                           AccentColor="DarkOrange"
-                          ContrastColor="#FFB2581A"
+                          ContrastColor="LightGray"
                           Exit="AppExiting"
                           />

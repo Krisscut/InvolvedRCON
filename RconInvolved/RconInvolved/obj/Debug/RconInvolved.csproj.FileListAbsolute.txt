@@ -167,3 +167,9 @@ D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\Rcon
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved.application
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\BattleNET.dll
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\BattleNET.pdb
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\log4net.dll
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\log4net.xml
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved_Content.g.cs
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Datas\Conf\Log4Net.conf
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Datas\Logs\readme.txt
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Datas\Conf\readme.txt

@@ -22,13 +22,13 @@
         </Grid.RowDefinitions>
 
         <extra:AnimatedWrapPanel Grid.Column="1">
-            <metro:CommandButton Click="OnClick"
+            <metro:CommandButton Click="OnClickValid"
                                  Background="{StaticResource TransparentBrush}"
                                  BorderBrush="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
                                  Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
                                  Margin="{Binding Converter={StaticResource DoubleToThicknessConverter}, ConverterParameter='Left, Top, Right', RelativeSource={RelativeSource Self}, Path=(params:General.BoldPaddingValue), Mode=OneWay}"
                                  Style="{StaticResource OkCommandButtonStyle}"/>
-            <metro:CommandButton Click="OnClick"
+            <metro:CommandButton Click="OnClickCancel"
                                  Background="{StaticResource TransparentBrush}"
                                  BorderBrush="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
                                  Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
@@ -147,7 +147,6 @@
                 <metro:ToggleSwitch x:Name="AutoReconnect" 
                                     Grid.Column="2"
                                     HorizontalAlignment="Center"
-                                    IsChecked="False"
                                     Margin="143,11,142,11" ToolTip="Auto-connexion lorsque ce profil est selectionné?"/>
 
             </Grid>

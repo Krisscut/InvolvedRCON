@@ -4,6 +4,8 @@
     using System.Windows;
     using System.Windows.Threading;
     using RconInvolved.Windows;
+    using Framework.UI.Controls;
+    using System.Windows.Media;
 
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -19,6 +21,14 @@
             dispatcherTimer.Tick += new EventHandler(OnLoadingEnded);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 5);
             dispatcherTimer.Start();
+
+
+            //TODO check for changelog update & display notification
+            NotifyBox.Show(
+                (DrawingImage)this.FindResource("SearchDrawingImage"),
+                "Changelog",
+                "Penser à verifier le changelog TODO",
+                false);
         }
 
          // Specify what you want to happen when the Elapsed event is raised.

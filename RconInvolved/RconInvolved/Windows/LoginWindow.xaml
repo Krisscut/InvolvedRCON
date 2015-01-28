@@ -22,10 +22,12 @@
             <ColumnDefinition Width="11*"/>
             <ColumnDefinition Width="541*"/>
         </Grid.ColumnDefinitions>
-        <ListBox
-                 ItemsSource="{Binding Servers}"
+        <ListBox x:Name="ListBoxServers"
+                 ItemsSource="{Binding ServersProfiles}"
                  Style="{StaticResource FishEyeListBoxStyle}" 
-                Grid.Column="2" Margin="10,0,10,0">
+                 Grid.Column="2" Margin="10,0,10,0"
+                 SelectionChanged="ListBoxServers_SelectionChanged"
+                 SizeChanged="ListBoxServers_SizeChanged">
 
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -37,13 +39,17 @@
                         <TextBlock Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}"
                                    Margin="{Binding Converter={StaticResource DoubleToThicknessConverter}, ConverterParameter='Left, Right, Bottom', RelativeSource={RelativeSource Self}, Path=(params:General.BoldPaddingValue), Mode=OneWay}"
                                    Style="{StaticResource HeaderTextStyle}" 
-                                   Text="{Binding Name}"
+                                   Text="{Binding ProfilName}"
                                    TextAlignment="Center"
                                    VerticalAlignment="Center"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <TextBlock x:Name="MaskList" 
+                   TextWrapping="Wrap" 
+                   Text="Aucun profil"
+                   Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48"/>
         <GridSplitter 
                       HorizontalAlignment="Stretch" 
                       RenderTransformOrigin="0.497,0.449" 
@@ -51,21 +57,22 @@
                       Style="{StaticResource HorizontalGridSplitterStyle}" Grid.ColumnSpan="3" Margin="10,0" IsManipulationEnabled="True" IsEnabled="False"/>
         <extra:Icon 
             Content="{StaticResource Login3IconStyle}" 
-            Cursor="Help" 
+            Cursor="None" 
             ToolTip="Fenetre de connexion" 
             Size="Medium" 
-            Stretch="Fill"  />
+            Stretch="Fill" IsEnabled="False"  />
         <GridSplitter 
             Grid.Column="1" 
             HorizontalAlignment="Stretch" 
             IsEnabled="False"
             Style="{StaticResource VerticalGridSplitterStyle}" 
             Margin="0,10,0,10" />
+        <Grid Grid.Row="2" Grid.ColumnSpan="3"/>
 
     </Grid>
 
     <extra:Window.ApplicationBar>
-        <metro:ApplicationBar Background="DimGray">
+        <metro:ApplicationBar Background="#FF2C2C2C">
 
             <metro:DropDownCommandButton Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
                                              Style="{StaticResource NewDropDownCommandButtonStyle}">
