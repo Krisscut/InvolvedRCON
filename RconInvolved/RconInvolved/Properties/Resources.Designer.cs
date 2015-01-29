@@ -109,5 +109,25 @@ namespace RconInvolved.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] SQLite_Interop_32 {
+            get {
+                object obj = ResourceManager.GetObject("SQLite_Interop_32", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] SQLite_Interop_64 {
+            get {
+                object obj = ResourceManager.GetObject("SQLite_Interop_64", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

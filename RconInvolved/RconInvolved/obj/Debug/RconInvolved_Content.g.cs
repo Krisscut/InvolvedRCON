@@ -10,6 +10,8 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("datas/logs/readme.txt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("datas/conf/readme.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x86/sqlite.interop.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/sqlite.interop.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("datas/conf/log4net.conf")]
 
 

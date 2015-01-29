@@ -173,3 +173,5 @@ D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\Rcon
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Datas\Conf\Log4Net.conf
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Datas\Logs\readme.txt
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Datas\Conf\readme.txt
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\x86\SQLite.Interop.dll
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\x64\SQLite.Interop.dll

@@ -44,7 +44,7 @@
 
         public String Password
         {
-            get { return this.Password; }
+            get { return this.password; }
             set { this.SetProperty(ref this.password, value); }
         }
 

@@ -14,7 +14,7 @@ namespace RconInvolved.Utils
         public static ILog MonitoringLogger
         {
             get {
-                Console.WriteLine("Get Monitoring Logger");
+                //Console.WriteLine("Get Monitoring Logger");
                 return LogManager.GetLogger("MonitoringLogger"); 
             }
         }

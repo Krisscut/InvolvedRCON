@@ -22,13 +22,15 @@
             <ColumnDefinition Width="11*"/>
             <ColumnDefinition Width="541*"/>
         </Grid.ColumnDefinitions>
+        <TextBlock x:Name="MaskList" 
+                   TextWrapping="Wrap" 
+                   Text="Aucun profil"
+                   Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48"/>
         <ListBox x:Name="ListBoxServers"
                  ItemsSource="{Binding ServersProfiles}"
                  Style="{StaticResource FishEyeListBoxStyle}" 
                  Grid.Column="2" Margin="10,0,10,0"
-                 SelectionChanged="ListBoxServers_SelectionChanged"
-                 SizeChanged="ListBoxServers_SizeChanged">
-
+                 SelectionChanged="ListBoxServers_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -46,20 +48,16 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <TextBlock x:Name="MaskList" 
-                   TextWrapping="Wrap" 
-                   Text="Aucun profil"
-                   Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48"/>
         <GridSplitter 
                       HorizontalAlignment="Stretch" 
                       RenderTransformOrigin="0.497,0.449" 
                       Grid.Row="1"
                       Style="{StaticResource HorizontalGridSplitterStyle}" Grid.ColumnSpan="3" Margin="10,0" IsManipulationEnabled="True" IsEnabled="False"/>
         <extra:Icon 
-            Content="{StaticResource Login3IconStyle}" 
-            Cursor="None" 
-            ToolTip="Fenetre de connexion" 
-            Size="Medium" 
+            Cursor="Help" 
+            ToolTip="Fenetre de gestion des profils et de connexion aux serveurs" 
+            Size="VeryLarge" 
+            Style="{StaticResource Login3IconStyle}"
             Stretch="Fill" IsEnabled="False"  />
         <GridSplitter 
             Grid.Column="1" 
@@ -67,7 +65,127 @@
             IsEnabled="False"
             Style="{StaticResource VerticalGridSplitterStyle}" 
             Margin="0,10,0,10" />
-        <Grid Grid.Row="2" Grid.ColumnSpan="3"/>
+        <Grid Grid.Row="2" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="69*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="DeleteButton" Grid.Row="0" ToolTip="Supprimer le profil"
+                Content="Supprimer"
+                IsEnabled="False" 
+                Click="DeleteButton_Click"
+                Margin="{Binding Converter={StaticResource DoubleToThicknessConverter}, ConverterParameter='Top, Right, Bottom', RelativeSource={RelativeSource Self}, Path=(params:General.BoldPaddingValue), Mode=OneWay}" Cursor="No"/>
+
+                <Button x:Name="ModifyButton" Grid.Row="1"   ToolTip="Modifier les infos profil"
+                Content="Modifier"
+                IsEnabled="False"
+                Click="ModifyButton_Click"
+                Margin="{Binding Converter={StaticResource DoubleToThicknessConverter}, ConverterParameter='Top, Right, Bottom', RelativeSource={RelativeSource Self}, Path=(params:General.BoldPaddingValue), Mode=OneWay}" Cursor="Pen"/>
+
+                <Button x:Name="ConnectButton" Grid.Row="2"   ToolTip="Se Connecter au serveur en utilisant le profil selectionné"
+                Content="Connecter"
+                IsEnabled="False"
+                Click="ConnectButton_Click"
+                Margin="{Binding Converter={StaticResource DoubleToThicknessConverter}, ConverterParameter='Top, Right, Bottom', RelativeSource={RelativeSource Self}, Path=(params:General.BoldPaddingValue), Mode=OneWay}" Cursor="ScrollE"/>
+
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="57*"/>
+                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="113*"/>
+                    <RowDefinition Height="45*"/>
+                    <RowDefinition Height="60*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock 
+                	Foreground="#FFB65D04"
+                	Margin="{Binding (params:General.BoldPaddingValue), ConverterParameter=Left\, Top\, Right, Converter={StaticResource DoubleToThicknessConverter}, Mode=OneWay, RelativeSource={RelativeSource Self}}"
+                	Style="{StaticResource HeaderTextStyle}" 
+                   ><Run Language="fr-fr" Text="Résumé du profil"/></TextBlock>
+
+                <TextBlock 
+                	Grid.Row="1"
+                	Foreground="#FFB65D04"
+                	Margin="{Binding (params:General.BoldPaddingValue), ConverterParameter=Left\, Top\, Right, Converter={StaticResource DoubleToThicknessConverter}, Mode=OneWay, RelativeSource={RelativeSource Self}}"
+                	Style="{StaticResource HeaderTextStyle}" 
+                   ><Run Language="fr-fr" Text="        Informations de connexions"/></TextBlock>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label
+                       Content="Hostname"
+                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       />
+                    <TextBox x:Name="HostnameValue"
+                         Grid.Column="1" 
+                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                         Text=""
+                         VerticalAlignment="Center" Focusable="False"/>
+                    <Label
+                        Grid.Row="1"
+                       Content="Port"
+                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       />
+                    <TextBox x:Name="PortValue"
+                         Grid.Row="1" 
+                         Grid.Column="1" 
+                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                         Text=""
+                         VerticalAlignment="Center" Focusable="False"/>
+                    <Label
+                        Grid.Row="2"
+                       Content="Password"
+                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                       />
+                    <TextBox x:Name="PasswordValue"
+                         Grid.Row="2" 
+                         Grid.Column="2" 
+                         Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                         Text=""
+                         VerticalAlignment="Center" Focusable="False"/>
+                </Grid>
+
+                <TextBlock 
+                	Grid.Row="3"
+                	Foreground="#FFB65D04"
+                	Margin="{Binding (params:General.BoldPaddingValue), ConverterParameter=Left\, Top\, Right, Converter={StaticResource DoubleToThicknessConverter}, Mode=OneWay, RelativeSource={RelativeSource Self}}"
+                	Style="{StaticResource HeaderTextStyle}" 
+                   ><Run Language="fr-fr" Text="        Autres informations"/></TextBlock>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                       Content="Auto-connexion"
+                       Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}"
+                       ToolTip="Auto-connexion lorsque ce profil est selectionné?" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       />
+
+                    <metro:ToggleSwitch x:Name="AutoReconnectSwitch"
+                                    Grid.Column="1"
+                                    HorizontalAlignment="Center"
+                                    ToolTip="Auto-connexion lorsque ce profil est selectionné?" IsEnabled="False"/>
+                </Grid>
+            </Grid>
+        </Grid>
 
     </Grid>
 
