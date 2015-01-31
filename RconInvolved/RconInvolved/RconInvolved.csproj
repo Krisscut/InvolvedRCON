@@ -159,6 +159,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Communications\Websockets\TestWebsocket.cs" />
     <Compile Include="DataPersistance\Configuration.cs" />
     <Compile Include="DataPersistance\SQLiteDatabase.cs" />
     <Compile Include="Models\ServerProfile.cs" />
