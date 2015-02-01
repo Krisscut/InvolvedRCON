@@ -32,9 +32,11 @@
             Logger.MonitoringLogger.Debug("Initializing LoginWindow");
             InitializeComponent();
 
+            //Title Bar color change
             var converter = new System.Windows.Media.BrushConverter();
             var brush = (Brush)converter.ConvertFromString("#404040");
             this.TitleBarBackground = brush;
+
             this.DataContext = loginDataView;
 
             //Event handler
@@ -47,19 +49,29 @@
                 Source = new Uri("/Framework.UI;component/Themes/ElysiumExtra/GeometryIcon.xaml", UriKind.RelativeOrAbsolute)
             };
 
-            BattlEyeLoginCredentials loginCredentials = new BattlEyeLoginCredentials();
+            //BattlEyeLoginCredentials loginCredentials = new BattlEyeLoginCredentials();
+            Logger.MonitoringLogger.Debug("Login Window Initialized");
         }
 
         #region ConfigurationFile
         private void LoadFromConfigurationFile()
         {
             XElement windowsConf = Configuration.GetElementByName("windows",WINDOW_NAME);
-            this.Left = Convert.ToDouble(windowsConf.Element("Left").Value);
-            this.Top = Convert.ToDouble(windowsConf.Element("Top").Value);
+            if (windowsConf != null)
+            {
+                Logger.MonitoringLogger.Debug("Configuration of " + WINDOW_NAME + "loaded : \n" + windowsConf.ToString());
+                this.Left = Convert.ToDouble(windowsConf.Element("Left").Value);
+                this.Top = Convert.ToDouble(windowsConf.Element("Top").Value);
+            }
+            else
+            {
+                Logger.MonitoringLogger.Warn("Can't retrieve " + WINDOW_NAME + " configuration, using default");
+            }
         }
 
         private void SaveToConfigurationFile()
         {
+            Logger.MonitoringLogger.Debug("Saving configuration of " + WINDOW_NAME + "loaded");
             XElement windowRoot = new XElement(WINDOW_NAME);
 
             XElement top = new XElement("Top", this.Top);
@@ -80,11 +92,12 @@
 
         void LoadedEventHandler(object sender, RoutedEventArgs e)
         {
-            Logger.MonitoringLogger.Debug("Login window loaded");
+            Logger.MonitoringLogger.Debug("Login window loaded event");
             LoadFromConfigurationFile();
 
             try
             {
+                Logger.MonitoringLogger.Info("Populate profile list with information from the database");
                 db = new SQLiteDatabase();
                 DataTable resultQuery;
                 String query = "select * FROM profileList;";
@@ -113,6 +126,7 @@
                            "Astuce",
                            "Un clic droit permet d'ouvrir le menu application !",
                            false);
+            Logger.MonitoringLogger.Debug(WINDOW_NAME + " loaded function ended");
         }
         #endregion WindowsEvents
 
@@ -129,7 +143,7 @@
         public void AuthorsClick(object sender, RoutedEventArgs e)
         {
             this.AppBarLogin.IsOpen = false;
-            Process.Start("http://krisscut.fr");
+            Process.Start("http://krisscut.legtux.org/applications/RconInvolved/about.html");
         }
 
         public void LicenseClick(object sender, RoutedEventArgs e)
@@ -187,13 +201,11 @@
             if (this.loginDataView.ServersProfiles.Count != 0)
             {
                 this.MaskList.Opacity = 0.0;
-
             }
             else
             {
                 this.MaskList.Opacity = 1.0;
             }
-
         }
 
         private async void DeleteButton_Click(object sender, RoutedEventArgs e)
@@ -243,7 +255,6 @@
                         this);
                 Logger.ExceptionLogger.Error("Attempt to delete from database error : " + profileSelected.ToString() + "\n" + e.ToString());
             }
-            
         }
 
         private void ModifyButton_Click(object sender, RoutedEventArgs e)

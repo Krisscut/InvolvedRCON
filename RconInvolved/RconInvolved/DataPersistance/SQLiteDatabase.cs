@@ -14,9 +14,8 @@ namespace RconInvolved.DataPersistance
     public class SQLiteDatabase
     {
         String dbConnection;
-
-        public static String DATABASE_FILE_PATH = AppDomain.CurrentDomain.BaseDirectory + "Datas/Databases/";
-        public static String DATABASE_LOCAL_FILE_PATH = "Datas/Databases/";
+        public static String DATABASE_LOCAL_FILE_PATH = "Data\\Databases\\";
+        public static String DATABASE_FILE_PATH = AppDomain.CurrentDomain.BaseDirectory + DATABASE_LOCAL_FILE_PATH;  
         public static String SQLITE_DATABASE_FILENAME = "sqliteDatabase.sqlite";
 
         /// <summary>
@@ -26,7 +25,6 @@ namespace RconInvolved.DataPersistance
         {
             Logger.MonitoringLogger.Info("Instanciating Sqlite Database");
             dbConnection = "Data Source=" + DATABASE_LOCAL_FILE_PATH + SQLITE_DATABASE_FILENAME;
-            CreateTableIfNotExists(dbConnection);
         }
 
         /// <summary>
@@ -37,7 +35,6 @@ namespace RconInvolved.DataPersistance
         {
             Logger.MonitoringLogger.Info("Instanciating new Sqlite Database : " + inputFile);
             dbConnection = String.Format("Data Source={0}", inputFile);
-            CreateTableIfNotExists(dbConnection);
         }
         
         public static void Initialize()
@@ -46,13 +43,15 @@ namespace RconInvolved.DataPersistance
             try
             {
                 CreateSqliteFile();
+                String dbToBuild = String.Format("Data Source={0}", DATABASE_LOCAL_FILE_PATH+ SQLITE_DATABASE_FILENAME);
+                String query = "CREATE TABLE IF NOT EXISTS profileList (rowID INTEGER PRIMARY KEY AUTOINCREMENT, profilName VARCHAR(200), hostname VARCHAR(200), port VARCHAR(20), password VARCHAR(200), autoReconnect VARCHAR(50))";
+                CreateTableIfNotExists(dbToBuild, query);
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e, "Error while creating sqlite file");
                 throw;
             }
-            
         }
 
         private static void CreateSqliteFile()
@@ -60,35 +59,42 @@ namespace RconInvolved.DataPersistance
             bool exists = Directory.Exists(DATABASE_FILE_PATH);
             if (!exists)
             {
-                Logger.MonitoringLogger.Info("Create Database directory into : " + DATABASE_FILE_PATH);
+                Logger.MonitoringLogger.Warn("Create Database directory into : " + DATABASE_FILE_PATH);
                 Directory.CreateDirectory(DATABASE_FILE_PATH);
             }
 
             exists = File.Exists(DATABASE_FILE_PATH + SQLITE_DATABASE_FILENAME);
             if (!exists)
             {
-                Logger.MonitoringLogger.Info("Create new SQL file : " + DATABASE_FILE_PATH + SQLITE_DATABASE_FILENAME);
+                Logger.MonitoringLogger.Warn("Create new SQL file : " + DATABASE_FILE_PATH + SQLITE_DATABASE_FILENAME);
                 SQLiteConnection.CreateFile(DATABASE_FILE_PATH + SQLITE_DATABASE_FILENAME);
             }
         }
 
-        private void CreateTableIfNotExists(String dbInfo) {
+        public static void CreateTableIfNotExists(String dbInfo, String sqlQuery) {
             using (SQLiteConnection con = new SQLiteConnection(dbInfo))
             using (SQLiteCommand command = con.CreateCommand())
             {
-                con.Open();
-                command.CommandText = "SELECT name FROM sqlite_master WHERE type='table' AND name='table_name';";
-                var name = command.ExecuteScalar();
+                try
+                {
+                    con.Open();
+                    command.CommandText = "SELECT name FROM sqlite_master WHERE type='table' AND name='table_name';";
+                    var name = command.ExecuteScalar();
 
-                // check account table exist or not 
-                // if exist do nothing 
-                if (name != null)
-                    return;
-                // profileList does'nt exist
-                Logger.MonitoringLogger.Info("Generate new table profileList");
-                command.CommandText = "CREATE TABLE IF NOT EXISTS profileList (rowID INTEGER PRIMARY KEY AUTOINCREMENT, profilName VARCHAR(200), hostname VARCHAR(200), port VARCHAR(20), password VARCHAR(200), autoReconnect VARCHAR(50))";
-                command.ExecuteNonQuery();
-                con.Close();
+                    // check account table exist or not 
+                    // if exist do nothing 
+                    if (name != null)
+                        return;
+                    // profileList does'nt exist
+                    Logger.MonitoringLogger.Warn("Generate new table profileList");
+                    command.CommandText = sqlQuery;
+                    command.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception e)
+                {
+                    Logger.ExceptionLogger.Error("Error in createTable if not Exists !");
+                }
             }
         }
 

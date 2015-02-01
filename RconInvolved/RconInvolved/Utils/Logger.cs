@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using log4net;
 using log4net.Config;
 
-[assembly: XmlConfigurator(ConfigFile = "Datas/Conf/Log4Net.conf", Watch = true)]
+[assembly: XmlConfigurator(ConfigFile = "Data/Conf/Log4Net.conf", Watch = true)]
 namespace RconInvolved.Utils
 {
     class Logger

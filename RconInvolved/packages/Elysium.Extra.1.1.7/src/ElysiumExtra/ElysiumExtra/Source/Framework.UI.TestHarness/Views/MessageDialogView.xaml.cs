@@ -12,7 +12,6 @@
         public MessageDialogView()
         {
             InitializeComponent();
-
         }
 
         private async void OnShowMessageDialogView(object sender, RoutedEventArgs e)

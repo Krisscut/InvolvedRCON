@@ -46,9 +46,9 @@ namespace RconInvolved {
     
     
     /// <summary>
-    /// MainWindow
+    /// SplashScreenWindow
     /// </summary>
-    public partial class MainWindow : Framework.UI.Controls.Window, System.Windows.Markup.IComponentConnector {
+    public partial class SplashScreenWindow : Framework.UI.Controls.Window, System.Windows.Markup.IComponentConnector {
         
         
         #line 22 "..\..\MainWindow.xaml"

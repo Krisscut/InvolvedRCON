@@ -11,7 +11,7 @@
               Title="InvolvedRCON - Login Screen" 
               Width="813.05" 
               ResizeMode="NoResize" 
-                Icon="/RconInvolved;component/Assets/favicon.png" >
+              Icon="/RconInvolved;component/Assets/favicon.png" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="103*"/>
