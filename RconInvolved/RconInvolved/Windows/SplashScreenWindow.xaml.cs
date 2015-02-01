@@ -12,6 +12,7 @@
     using System.Diagnostics;
     using RconInvolved.Utils;
     using System.Windows.Controls;
+    using System.Threading.Tasks;
 
     /// <summary>
     /// Logique d'interaction pour SplashScreenWindow.xaml
@@ -38,11 +39,17 @@
 
             this.Show();
             //Checks if we are in debug or downloaded version
-            if (Configuration.applicationDeployment != null) ChecksForDeployment();
-            else versionChecked = true;
+            if (Configuration.applicationDeployment != null) AsyncOperations();
+            else versionChecked = true; 
         }
 
-        private async void ChecksForDeployment()
+        private async void AsyncOperations()
+        {
+            await ChecksForDeployment();
+            await WaitForChangelog();
+        }
+
+        private async Task ChecksForDeployment()
         {
             contentLoading.Content = "Vérification de version";
             try
@@ -74,37 +81,13 @@
 
                 if (info.UpdateAvailable)
                 {
-
+                    DeploymentWindow deployWindow = new DeploymentWindow(info);
+                    deployWindow.Show();
                 }
-
-                if (Configuration.applicationDeployment.IsFirstRun)
+                else
                 {
-                    contentLoading.Content = "Affichage changelog";
-                    await MessageDialog.ShowAsync(
-                        "Nouvelle version !",
-                        "Voulez-vous afficher le changelog de la nouvelle version?",
-                        new[] 
-                        {
-                            new MessageDialogButton()
-                            {
-                                Command = new DelegateCommand(() => ConfirmChangelogView()),
-                                Content = "Oui"
-                            },
-                            new MessageDialogButton()
-                            {
-                                Command = new DelegateCommand(() => NoChangelogView()),
-                                Content = "Non"
-                            }
-                        },
-                        MessageDialogType.Light, 
-                        this);
-                    NotifyBox.Show(
-                    (DrawingImage)this.FindResource("SearchDrawingImage"),
-                    "Nouvelle version",
-                    "Vous utilisez une nouvelle version de l'application : " + Configuration.applicationDeployment.CurrentVersion.ToString(),
-                    false);
+                    versionChecked = true;
                 }
-                versionChecked = true;
             }
             catch (Exception e)
             {
@@ -113,6 +96,13 @@
                 throw;
             }
         }
+
+        private async Task WaitForChangelog ()
+        {
+            //Wait for the version to be checked
+
+        }
+
         private void ConfirmChangelogView()
         {
             Process.Start(Configuration.URL_CHANGELOG);
