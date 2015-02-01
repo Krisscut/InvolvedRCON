@@ -9,14 +9,13 @@
     <meta name="author" content="Krisscut">
     <link rel="icon" href="../img/favicon.ico">
 
-    <title>RconInvolved - Changelogs </title>
+    <title>RconInvolved - Changelog Vx.x.x</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/lib/bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
-    <link href="changelog.css" rel="stylesheet">
+    <link href="../sticky-footer-navbar.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -42,13 +41,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">RconInvolved - Changelogs</a>
+          <a class="navbar-brand" href="#">RconInvolved - Changelog Vx.x.x</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../features/features.html">Features</a></li>
-            <li class="active"><a href="#">Changelogs</a></li>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../features/features.html">Features</a></li>
+            <li><a href="../changelog.html">Changelogs HUB</a></li>
+            <li class="active"><a href="#">Changelog Vx.x1.x</a></li>
             <li ><a href="../../deployment/deploy.html">Download</a></li>
             <li><a href="mailto:krisscut@hotmail.fr">Contact</a></li>
           </ul>
@@ -59,29 +59,27 @@
     <!-- Begin page content -->
     <div class="container">
       <div class="page-header">
-        <h1>Changelogs viewer</h1>
+        <h1>Changelog Vx.x.x</h1>
       </div>
-      <p class="lead">On this page you can view all the  <code>versions</code>  ( and their respective <code>changelogs</code>  ) that have been released at the moment or that will be deployed on the future.</p>
+      <p class="lead">On this page you can view all the  <code>modifications</code> that have been made to the software since the previous version (<a href="changelog_x_x_x.html">Changelog x.x.x</a>)</p>
 
-      <h2 class="sub-header">Version history</h2>
+      <h2 class="sub-header">Changes history</h2>
           <div class="table-responsive">
             <table class="table table-striped table-hover">
               <thead>
                 <tr>
-                  <th>Version</th>
-                  <th>Main Features</th>
                   <th>Type</th>
-                  <th>Status</th>
-                  <th>Changelog</th>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Link</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>0.1.0</td>
-                  <td>First deployment, basic structure</td>
-                  <td><span class="label label-success">Minor Version</span></td>
-                  <td><span class="label label-default">DEV</span></td>
-                  <td><a href="content/changelog_0_1_0.html">changelog_0_1_0</a></td>
+                  <td><span class="label label-primary">Dev</span></td>
+                  <td>01/02/2015</td>
+                  <td>Minor Version</td>
+                  <td><a href="#">N/A</a></td>
                 </tr>
               </tbody>
             </table>
@@ -93,54 +91,15 @@
               <h3 class="panel-title">Type Legend</h3>
             </div>
             <div class="panel-body">
-              <p><span class="label label-primary">Major Version</span> This represents a major evolution in the development of the application, possibly without revert-compatibility<p>
-              <p><span class="label label-success">Minor Version</span> Additions and improvements that has allowed the application to have new features <p>
-              <p><span class="label label-info">Revision Version</span> Somes additions and fixes for the application<p>
+
+              <p><span class="label label-primary">Dev</span> This represents a major evolution in the development of the application, possibly without revert-compatibility<p>
+              <p><span class="label label-success">Added</span> A new features for the application<p>
+              <p><span class="label label-info">Test</span> A new feature, introduce as a proof of concept and not really for whole scale production<p>
+              <p><span class="label label-default">Rework</span> Rework of an existing feature or some functionnality to improve it.</p>
+              <p><span class="label label-warning">Fix</span> Fix a bug that have been reported or found<p>
+              <p><span class="label label-danger">Critical Fix</span> Fix a critical bug that can produce dysfunctions  or fatal crash in the software.<p>
               </div>
           </div>
-
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Status</h3>
-            </div>
-            <div class="panel-body">
-              <p><span class="label label-default">Dev</span> Currently in development</p>
-              <p><span class="label label-warning">Waiting for deployment</span> This version is in the final stage for the deployment, the test phase<p>
-              <p><span class="label label-info">Current</span> Current version available throught the download link<p>
-              <p><span class="label label-success">Deployed</span> Deployed but outdated<p>
-              <p><span class="label label-danger">Aborted</span> Aborted due to bugs or other problems<p>
-
-              <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Type</th>
-                <th>Type</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="success">    <!-- Deployed -->
-                <td>Deployed</td>
-                <td>Deployed</td>
-              </tr>
-              <tr class="info">  <!-- Current -->
-                <td>Current</td>
-                <td>Current</td>
-              </tr>
-              <tr class="warning">  <!-- Waiting -->
-                <td>Waiting</td>
-                <td>Waiting</td>
-              </tr>
-              <tr class="danger">  <!-- Aborted -->
-                <td>Aborted</td>
-                <td>Aborted</td>
-              </tr>
-            </tbody>
-          </table>
-
-            </div>
-          </div>
-
-
     </div>
 
 

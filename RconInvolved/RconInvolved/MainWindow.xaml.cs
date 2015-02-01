@@ -39,7 +39,7 @@
                 if (Configuration.applicationDeployment.IsFirstRun)
                 {
                     await MessageDialog.ShowAsync(
-                       "Nouvelle version",
+                       "Nouvelle version !",
                        "Voulez-vous afficher le changelog de la nouvelle version?",
                        new[] 
                         {
@@ -55,18 +55,13 @@
                             }
                         },
                        MessageDialogType.Light);
-
                     NotifyBox.Show(
                     (DrawingImage)this.FindResource("SearchDrawingImage"),
                     "Nouvelle version",
                     "Vous utilisez une nouvelle version de l'application : " + Configuration.applicationDeployment.CurrentVersion.ToString(),
                     false);
-
                 }
-                else
-                {
-                    versionChecked = true;
-                }
+                versionChecked = true;
             }
             catch (Exception e)
             {
@@ -74,15 +69,15 @@
                 Logger.ExceptionLogger.Error(e.ToString());
                 throw;
             }
-
         }
         private void ConfirmChangelogView()
         {
             Process.Start(Configuration.URL_CHANGELOG);
+            versionChecked = true;
         }
         private void NoChangelogView()
         {
-            Logger.MonitoringLogger.Info("Pas de visionnage du changelog");
+            Logger.MonitoringLogger.Info("use have choosen to don't show the changelog.");
             versionChecked = true;
         }
 

@@ -43,7 +43,7 @@ namespace RconInvolved.DataPersistance
             {
                 applicationDeployment = ApplicationDeployment.CurrentDeployment;
                 Version version = applicationDeployment.CurrentVersion;
-                URL_CHANGELOG = String.Format("http://krisscut.legtux.org/applications/RconInvolved/changelog/content/changelog_{0}_{1}_{2}.html", version.Major, version.Minor, version.Revision );
+                URL_CHANGELOG = String.Format("http://krisscut.legtux.org/applications/RconInvolved/changelog/content/changelog_{0}_{1}_{2}.html", version.Major, version.Minor, version.Build );
             }
             catch (Exception e)
             {
