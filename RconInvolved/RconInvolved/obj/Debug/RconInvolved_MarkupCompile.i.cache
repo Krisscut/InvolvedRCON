@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\App.xaml
-3421845855
+7-877577556
 5-1578633262
-18-1802713651
-35410780287
-MainWindow.xaml;OverlayViews\CreateConnectionOverlayView.xaml;Windows\LoginWindow.xaml;
+23-1115970545
+36-1743937220
+MainWindow.xaml;OverlayViews\CreateConnectionOverlayView.xaml;OverlayViews\CreateProfileOverlayView.xaml;OverlayViews\CreateProfileOverlayViews\BattleyeView.xaml;OverlayViews\CreateProfileOverlayViews\HelpView.xaml;OverlayViews\CreateProfileOverlayViews\NotificationView.xaml;Windows\LoginWindow.xaml;
 
 False
 

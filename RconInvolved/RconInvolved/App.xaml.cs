@@ -2,6 +2,7 @@
 using RconInvolved.DataPersistance;
 using RconInvolved.Utils;
 using RconInvolved.Communications.Websockets;
+using System.Windows;
 
 
 namespace RconInvolved
@@ -15,11 +16,19 @@ namespace RconInvolved
 
         public App()
         {
-            log4net.ThreadContext.Properties["log_who"] = "Rcon_Involved";
-            Logger.MonitoringLogger.Info("RconInvolved is starting");
-            Configuration.Initialize();
-            SQLiteDatabase.Initialize();
-            testSocket = new TestWebsocket();
+            try
+            {
+                log4net.ThreadContext.Properties["log_who"] = "Rcon_Involved";
+                Logger.MonitoringLogger.Info("RconInvolved is starting");
+                Configuration.Initialize();
+                SQLiteDatabase.Initialize();
+                testSocket = new TestWebsocket();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+                System.Environment.Exit(-1);
+            }
         }
 
         protected void AppExiting(object sender, EventArgs e)

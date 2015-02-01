@@ -24,7 +24,7 @@ namespace RconInvolved.DataPersistance
         /// </summary>
         public SQLiteDatabase()
         {
-            Logger.MonitoringLogger.Info("INstanciating Sqlite Database");
+            Logger.MonitoringLogger.Info("Instanciating Sqlite Database");
             dbConnection = "Data Source=" + DATABASE_LOCAL_FILE_PATH + SQLITE_DATABASE_FILENAME;
             CreateTableIfNotExists(dbConnection);
         }
@@ -35,15 +35,24 @@ namespace RconInvolved.DataPersistance
         /// <param name="inputFile">The File containing the DB</param>
         public SQLiteDatabase(String inputFile)
         {
-            Logger.MonitoringLogger.Info("INstanciating Sqlite Database : " + inputFile);
+            Logger.MonitoringLogger.Info("Instanciating new Sqlite Database : " + inputFile);
             dbConnection = String.Format("Data Source={0}", inputFile);
             CreateTableIfNotExists(dbConnection);
         }
         
         public static void Initialize()
         {
-            Logger.MonitoringLogger.Info("Initializing SQLite datbase");
-            CreateSqliteFile();
+            Logger.MonitoringLogger.Info("Initializing SQLite database");
+            try
+            {
+                CreateSqliteFile();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e, "Error while creating sqlite file");
+                throw;
+            }
+            
         }
 
         private static void CreateSqliteFile()
@@ -185,8 +194,9 @@ namespace RconInvolved.DataPersistance
 		    {
 			    this.ExecuteNonQuery(String.Format("update {0} set {1} where {2};", tableName, vals, where));
 		    }
-		    catch
+		    catch(Exception fail)
 		    {
+                Logger.ExceptionLogger.Error("Attempt to update database error :\n" + fail.ToString());
 			    returnCode = false;
 		    }
 		    return returnCode;
@@ -201,13 +211,15 @@ namespace RconInvolved.DataPersistance
 	    public bool Delete(String tableName, String where)
 	    {
 		    Boolean returnCode = true;
+            String query = String.Format("delete from {0} where {1};", tableName, where);
 		    try
 		    {
-			    this.ExecuteNonQuery(String.Format("delete from {0} where {1};", tableName, where));
+			    this.ExecuteNonQuery(query);
 		    }
 		    catch (Exception fail)
 		    {
 			    MessageBox.Show(fail.Message);
+                Logger.ExceptionLogger.Error(String.Format("Attempt to delete from database error with this parameters : {0} \n {1};", query, fail.ToString()));
 			    returnCode = false;
 		    }
 		    return returnCode;
@@ -238,6 +250,7 @@ namespace RconInvolved.DataPersistance
 		    catch(Exception fail)
 		    {
 			    MessageBox.Show(fail.Message);
+                Logger.ExceptionLogger.Error("Attempt to insert into database error :\n" + fail.ToString());
 			    returnCode = false;
 		    }
 		    return returnCode;
@@ -259,8 +272,9 @@ namespace RconInvolved.DataPersistance
 			    }
 			    return true;
 		    }
-		    catch
+		    catch(Exception e)
 		    {
+                Logger.ExceptionLogger.Error("Attempt to ClearDB error :\n" + e.ToString());
 			    return false;
 		    }
 	    }
@@ -278,8 +292,9 @@ namespace RconInvolved.DataPersistance
 			    this.ExecuteNonQuery(String.Format("delete from {0};", table));
 			    return true;
 		    }
-		    catch
+		    catch(Exception e)
 		    {
+                Logger.ExceptionLogger.Error("Attempt to ClearTable error :\n" + e.ToString());
 			    return false;
 		    }
 	    }       

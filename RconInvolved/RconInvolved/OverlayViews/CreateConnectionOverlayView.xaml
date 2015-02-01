@@ -7,7 +7,9 @@
                      xmlns:params="http://schemas.codeplex.com/elysium/params"
                      xmlns:extra="http://schemas.extra.com/ui"
                      mc:Ignorable="d"
-                     Title="This title only visible if TitleBarVisibility = Visible (Collapsed by default)" Height="411.05" Width="1035">
+                     Title="This title only visible if TitleBarVisibility = Visible (Collapsed by default)" 
+                     Height="411.05" 
+                     Width="1035">
     <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

@@ -78,7 +78,7 @@
                     this.login.TaskbarProgressState = System.Windows.Shell.TaskbarItemProgressState.None;
                     login.TaskbarProgressValue = 0;
 
-                    ServerProfile serverProfile = new ServerProfile( profilName, hostname, port, password, autoReconnect);
+                    ServerProfile serverProfile = new ServerProfile(profilName, hostname, port, password, autoReconnect);
                     dataView.ServersProfiles.Add(serverProfile);
 
                     db = new SQLiteDatabase();

@@ -1,5 +1,4 @@
-﻿
-namespace RconInvolved.Windows
+﻿namespace RconInvolved.Windows
 {
     using System;
     using System.Diagnostics;
@@ -17,6 +16,7 @@ namespace RconInvolved.Windows
     using RconInvolved.Models;
     using System.Collections.Specialized;
     using Framework.UI.Controls;
+    using Framework.UI.Input;
     /// <summary>
     /// Logique d'interaction pour LoginWindow.xaml
     /// </summary>
@@ -53,7 +53,7 @@ namespace RconInvolved.Windows
         #region ConfigurationFile
         private void LoadFromConfigurationFile()
         {
-            XElement windowsConf = Configuration.GetRootElementByName(WINDOW_NAME);
+            XElement windowsConf = Configuration.GetElementByName("windows",WINDOW_NAME);
             this.Left = Convert.ToDouble(windowsConf.Element("Left").Value);
             this.Top = Convert.ToDouble(windowsConf.Element("Top").Value);
         }
@@ -67,8 +67,7 @@ namespace RconInvolved.Windows
 
             windowRoot.Add(top);
             windowRoot.Add(left);
-
-            Configuration.ReplaceRootElement(windowRoot);
+            Configuration.ReplaceChildRootElement("windows", windowRoot);
         }
         #endregion
 
@@ -99,11 +98,14 @@ namespace RconInvolved.Windows
                     Logger.MonitoringLogger.Info(r.ToString());
                 }
             }
-            catch (Exception fail)
+            catch (Exception databaseException)
             {
-                String error = "The following error has occurred:\n\n";
-                error += fail.Message.ToString() + "\n\n";
-                MessageBox.Show(error);
+                MessageDialog.ShowAsync(
+                        "Erreur de lecture de la base de donnée",
+                        "Erreur de lecture de la base de donnée ! Informations de debug :\n" + databaseException.ToString(),
+                        MessageBoxButton.OK,
+                        MessageDialogType.Light,
+                        this);
             }
 
             NotifyBox.Show(
@@ -116,7 +118,8 @@ namespace RconInvolved.Windows
 
         public void NewConnexionClick(object sender, RoutedEventArgs e)
         {
-            CreateConnectionOverlayView window = new CreateConnectionOverlayView(this, GetWindow(this), loginDataView);
+            this.AppBarLogin.IsOpen = false;
+            CreateProfileOverlayView window = new CreateProfileOverlayView(this, GetWindow(this), loginDataView);
             this.TaskbarProgressState = System.Windows.Shell.TaskbarItemProgressState.Paused;
             this.TaskbarProgressValue = 50;
             //this.TaskbarIsBusy = true;
@@ -125,38 +128,57 @@ namespace RconInvolved.Windows
 
         public void AuthorsClick(object sender, RoutedEventArgs e)
         {
+            this.AppBarLogin.IsOpen = false;
             Process.Start("http://krisscut.fr");
         }
 
         public void LicenseClick(object sender, RoutedEventArgs e)
         {
+            this.AppBarLogin.IsOpen = false;
             Process.Start("http://www.google.fr");
         }
 
         public void DonateClick(object sender, RoutedEventArgs e)
         {
+            this.AppBarLogin.IsOpen = false;
             Process.Start("http://www.google.fr");
         }
 
         private void ListBoxServers_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            this.ConnectButton.IsEnabled = true;
-            this.ModifyButton.IsEnabled = true;
-            this.DeleteButton.IsEnabled = true;
-
             int index = this.ListBoxServers.SelectedIndex;
             Logger.MonitoringLogger.Debug("Selection changed to index " + index);
-            foreach (ServerProfile prof in loginDataView.ServersProfiles)
-            {
-                if (loginDataView.ServersProfiles.IndexOf(prof) == index) profileSelected = prof;
-            };
 
-            Logger.MonitoringLogger.Debug("Updating UI with parameters");
-            //Set UI
-            this.HostnameValue.Text = profileSelected.Hostname;
-            this.PortValue.Text = profileSelected.Port.ToString();
-            this.PasswordValue.Text = profileSelected.Password;
-            this.AutoReconnectSwitch.IsChecked = profileSelected.AutoReconnect;
+            Boolean activeButton = false;
+            String hostnameValue = "";
+            String portValue = "";
+            String passwordValue = "";
+            Boolean autoReconnectValue = false;
+
+            //Checks if index is selected or unselected 
+            if (index != -1)
+            {
+                activeButton = true;
+                foreach (ServerProfile prof in loginDataView.ServersProfiles)
+                {
+                    if (loginDataView.ServersProfiles.IndexOf(prof) == index) profileSelected = prof;
+                };
+                //Set UI
+                hostnameValue = profileSelected.Hostname;
+                portValue = profileSelected.Port.ToString();
+                passwordValue = profileSelected.Password;
+                autoReconnectValue = profileSelected.AutoReconnect;
+            }
+
+            //Now update the UI
+            Logger.MonitoringLogger.Debug("Updating UI with new parameters");
+            this.HostnameValue.Text = hostnameValue;
+            this.PortValue.Text = portValue;
+            this.PasswordValue.Text = passwordValue;
+            this.AutoReconnectSwitch.IsChecked = autoReconnectValue;
+            this.ConnectButton.IsEnabled = activeButton;
+            this.ModifyButton.IsEnabled = activeButton;
+            this.DeleteButton.IsEnabled = activeButton;
         }
 
         private void CollectionChangedEventHandler(object sender, NotifyCollectionChangedEventArgs e)
@@ -174,14 +196,54 @@ namespace RconInvolved.Windows
 
         }
 
-        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        private async void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-             MessageDialog.ShowAsync(
-                        "WIP",
-                        "Functionnalité pas encore implémentée !",
+            await MessageDialog.ShowAsync(
+                "Suppression de profil",
+                "Voulez-vous vraiment supprimer le profil selectionné?",
+                new[] 
+                {
+                    new MessageDialogButton()
+                    {
+                        Command = new DelegateCommand(() => ConfirmDeleteProfile()),
+                        Content = "Oui"
+                    },
+                    new MessageDialogButton()
+                    {
+                        Command = new DelegateCommand(() => Logger.MonitoringLogger.Info("Suppression de profil annule")),
+                        Content = "Non"
+                    }
+                },
+                MessageDialogType.Light);
+        }
+
+        private void ConfirmDeleteProfile()
+        {
+            try
+            {
+                //Delete from Database
+                db = new SQLiteDatabase();
+                db.Delete("profileList", String.Format("profilName = '{0}'", profileSelected.ProfilName));
+                loginDataView.ServersProfiles.Remove(profileSelected);
+                this.profileSelected = null;
+
+                NotifyBox.Show(
+                           (DrawingImage)this.FindResource("SearchDrawingImage"),
+                           "Profil Manager",
+                           "Profil supprimé avec succès !",
+                           false);
+            }
+            catch (Exception e)
+            {
+                MessageDialog.ShowAsync(
+                        "Exception !",
+                        "Problème lors de la suppression du profil selectionné, annulation !",
                         MessageBoxButton.OK,
                         MessageDialogType.Light,
                         this);
+                Logger.ExceptionLogger.Error("Attempt to delete from database error : " + profileSelected.ToString() + "\n" + e.ToString());
+            }
+            
         }
 
         private void ModifyButton_Click(object sender, RoutedEventArgs e)
@@ -203,7 +265,5 @@ namespace RconInvolved.Windows
                         MessageDialogType.Light,
                         this);
         }
-
-
     }
 }

@@ -26,12 +26,13 @@
     <MapFileExtensions>false</MapFileExtensions>
     <InstallUrl>http://krisscut.legtux.org/applications/RconInvolved/deployment/</InstallUrl>
     <SupportUrl>http://feedback.involved-gaming.com/my_view_page.php</SupportUrl>
+    <ErrorReportUrl>http://krisscut.legtux.org/applications/RconInvolved/index.html</ErrorReportUrl>
     <ProductName>RconInvolved</ProductName>
     <PublisherName>Krisscut</PublisherName>
     <SuiteName>Involved Tools</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
-    <WebPage>myWebDeploymentPage.html</WebPage>
-    <ApplicationRevision>14</ApplicationRevision>
+    <WebPage>deploy.html</WebPage>
+    <ApplicationRevision>18</ApplicationRevision>
     <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -120,6 +121,7 @@
     <Reference Include="System.Data.SQLite.Linq">
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.94.1\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Reactive.Core">
       <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
@@ -167,11 +169,24 @@
     <Compile Include="OverlayViews\CreateConnectionOverlayView.xaml.cs">
       <DependentUpon>CreateConnectionOverlayView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OverlayViews\CreateProfileOverlayView.xaml.cs">
+      <DependentUpon>CreateProfileOverlayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OverlayViews\CreateProfileOverlayViews\BattleyeView.xaml.cs">
+      <DependentUpon>BattleyeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OverlayViews\CreateProfileOverlayViews\HelpView.xaml.cs">
+      <DependentUpon>HelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OverlayViews\CreateProfileOverlayViews\NotificationView.xaml.cs">
+      <DependentUpon>NotificationView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ExceptionHandler.cs" />
     <Compile Include="Utils\Logger.cs" />
     <Compile Include="ViewModels\LoginWindowDataViewModel.cs" />
     <Compile Include="Windows\LoginWindow.xaml.cs">
@@ -190,6 +205,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="OverlayViews\CreateConnectionOverlayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OverlayViews\CreateProfileOverlayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OverlayViews\CreateProfileOverlayViews\BattleyeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OverlayViews\CreateProfileOverlayViews\HelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OverlayViews\CreateProfileOverlayViews\NotificationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -240,9 +271,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Assets\favicon.png" />
   </ItemGroup>

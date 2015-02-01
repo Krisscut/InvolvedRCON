@@ -191,3 +191,12 @@ D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Newt
 D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\RestSharp.xml
 D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\websocket-sharp.xml
 D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved_Content.g.cs
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\OverlayViews\CreateProfileOverlayView.baml
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\OverlayViews\CreateProfileOverlayView.g.cs
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\OverlayViews\CreateProfileOverlayViews\BattleyeView.baml
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\OverlayViews\CreateProfileOverlayViews\NotificationView.baml
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\OverlayViews\CreateProfileOverlayViews\BattleyeView.g.cs
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\OverlayViews\CreateProfileOverlayViews\NotificationView.g.cs
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved_MarkupCompile.lref
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\OverlayViews\CreateProfileOverlayViews\HelpView.baml
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\OverlayViews\CreateProfileOverlayViews\HelpView.g.cs

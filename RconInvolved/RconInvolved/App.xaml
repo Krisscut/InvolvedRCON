@@ -6,5 +6,5 @@
                           StartupUri="MainWindow.xaml"
                           AccentColor="DarkOrange"
                           ContrastColor="LightGray"
-                          Exit="AppExiting"
-                          />
+                          Exit="AppExiting">
+</extra:ElysiumApplication>

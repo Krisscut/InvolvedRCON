@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("RconInvolved")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Involved Gaming")]
 [assembly: AssemblyProduct("RconInvolved")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright © Krisscut 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

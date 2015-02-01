@@ -10,7 +10,8 @@
               Height="469.5" 
               Title="InvolvedRCON - Login Screen" 
               Width="813.05" 
-              ResizeMode="NoResize" Icon="/RconInvolved;component/Assets/favicon.png" >
+              ResizeMode="NoResize" 
+                Icon="/RconInvolved;component/Assets/favicon.png" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="103*"/>
@@ -190,7 +191,7 @@
     </Grid>
 
     <extra:Window.ApplicationBar>
-        <metro:ApplicationBar Background="#FF2C2C2C">
+        <metro:ApplicationBar x:Name="AppBarLogin" Background="#FF2C2C2C">
 
             <metro:DropDownCommandButton Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
                                              Style="{StaticResource NewDropDownCommandButtonStyle}">
