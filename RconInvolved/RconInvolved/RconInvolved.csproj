@@ -25,6 +25,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
     <InstallUrl>http://krisscut.legtux.org/applications/RconInvolved/deployment/</InstallUrl>
+    <UpdateUrl>http://krisscut.legtux.org/applications/RconInvolved/deployment/</UpdateUrl>
     <SupportUrl>http://feedback.involved-gaming.com/my_view_page.php</SupportUrl>
     <ErrorReportUrl>http://krisscut.legtux.org/applications/RconInvolved/index.html</ErrorReportUrl>
     <ProductName>RconInvolved</ProductName>
@@ -32,7 +33,7 @@
     <SuiteName>Involved Tools</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>deploy.html</WebPage>
-    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationRevision>33</ApplicationRevision>
     <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

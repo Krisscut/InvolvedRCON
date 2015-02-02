@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\
 RconInvolved
 none
 false
 DEBUG;TRACE
-D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\RconInvolvedApp.xaml
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\RconInvolvedApp.xaml
 81490089000
 5131065322
 20760241646
-372084573442
+37940574351
 Windows\DeploymentWindow.xaml;Windows\SplashScreenWindow.xaml;OverlayViews\CreateConnectionOverlayView.xaml;OverlayViews\CreateProfileOverlayView.xaml;OverlayViews\CreateProfileOverlayViews\BattleyeView.xaml;OverlayViews\CreateProfileOverlayViews\HelpView.xaml;OverlayViews\CreateProfileOverlayViews\NotificationView.xaml;Windows\LoginWindow.xaml;
 
 False

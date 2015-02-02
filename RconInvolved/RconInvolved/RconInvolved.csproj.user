@@ -4,7 +4,7 @@
     <PublishUrlHistory>ftp://krisscut.legtux.org/applications/RconInvolved/deployment/|D:\Mon_Bureau\GitHub repos\InvolvedRCON\Publish\|D:\Mon Bureau\Repositories\InvolvedRCON\publish\|ftp://krisscut.legtux.org/deployment/|ftp://krisscut.ddns.net:21000/deployment/</PublishUrlHistory>
     <InstallUrlHistory>http://krisscut.legtux.org/applications/RconInvolved/deployment/|http://krisscut.ddns.net/applications/RconInvolved/deployment/|http://feedback.involved-gaming.com/my_view_page.php/</InstallUrlHistory>
     <SupportUrlHistory>http://feedback.involved-gaming.com/my_view_page.php</SupportUrlHistory>
-    <UpdateUrlHistory />
+    <UpdateUrlHistory>http://krisscut.legtux.org/applications/RconInvolved/deployment/</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>fr-FR</FallbackCulture>
