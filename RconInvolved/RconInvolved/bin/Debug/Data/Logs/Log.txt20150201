@@ -1,0 +1,48 @@
+[INFO] - [9] - 2015-02-01 23:14:13,964 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [9] - 2015-02-01 23:14:13,978 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [9] - 2015-02-01 23:14:13,978 - MonitoringLogger - Rcon_Involved - Configuration FIle path : D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Data\Conf\ 
+[WARN] - [9] - 2015-02-01 23:14:13,979 - MonitoringLogger - Rcon_Involved - Generates Configuration File D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Data\Conf\RconInvolved.conf 
+[WARN] - [9] - 2015-02-01 23:14:14,011 - MonitoringLogger - Rcon_Involved - This application is not network Deployed or run in debug mode 
+[INFO] - [9] - 2015-02-01 23:14:14,012 - MonitoringLogger - Rcon_Involved - Initializing SQLite database 
+[WARN] - [9] - 2015-02-01 23:14:14,018 - MonitoringLogger - Rcon_Involved - Create Database directory into : D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Data\Databases\ 
+[WARN] - [9] - 2015-02-01 23:14:14,018 - MonitoringLogger - Rcon_Involved - Create new SQL file : D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Data\Databases\sqliteDatabase.sqlite 
+[WARN] - [9] - 2015-02-01 23:14:14,071 - MonitoringLogger - Rcon_Involved - Generate new table profileList 
+[DEBUG] - [9] - 2015-02-01 23:14:15,662 - MonitoringLogger - Rcon_Involved - Splashscreen window Instanciated 
+[DEBUG] - [9] - 2015-02-01 23:14:16,190 - MonitoringLogger - Rcon_Involved - Application is launched without applicationDeployment 
+[INFO] - [9] - 2015-02-01 23:14:20,678 - MonitoringLogger - Rcon_Involved - Splashscreen timer, versionChecked :True - changelogChoice :True 
+[INFO] - [9] - 2015-02-01 23:14:20,679 - MonitoringLogger - Rcon_Involved - Splashscreen timer, checking if Changelog need to be displayed 
+[DEBUG] - [9] - 2015-02-01 23:14:20,689 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [9] - 2015-02-01 23:14:21,703 - MonitoringLogger - Rcon_Involved - Login Window Initialized 
+[DEBUG] - [9] - 2015-02-01 23:14:21,863 - MonitoringLogger - Rcon_Involved - Login window loaded event 
+[WARN] - [9] - 2015-02-01 23:14:21,864 - MonitoringLogger - Rcon_Involved - Can't retrieve LoginWindow configuration, using default 
+[INFO] - [9] - 2015-02-01 23:14:21,864 - MonitoringLogger - Rcon_Involved - Populate profile list with information from the database 
+[INFO] - [9] - 2015-02-01 23:14:21,864 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[DEBUG] - [9] - 2015-02-01 23:14:21,995 - MonitoringLogger - Rcon_Involved - LoginWindow loaded function ended 
+[DEBUG] - [9] - 2015-02-01 23:14:25,938 - MonitoringLogger - Rcon_Involved - Login window closed 
+[DEBUG] - [9] - 2015-02-01 23:14:25,939 - MonitoringLogger - Rcon_Involved - Saving configuration of LoginWindowloaded 
+[INFO] - [9] - 2015-02-01 23:14:26,336 - MonitoringLogger - Rcon_Involved - RconInvolved is closing, see you ! 
+[INFO] - [10] - 2015-02-01 23:21:19,230 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-02-01 23:21:19,242 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [10] - 2015-02-01 23:21:19,242 - MonitoringLogger - Rcon_Involved - Configuration FIle path : D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\Data\Conf\ 
+[INFO] - [10] - 2015-02-01 23:21:19,243 - MonitoringLogger - Rcon_Involved - Reading configuration File 
+[WARN] - [10] - 2015-02-01 23:21:19,271 - MonitoringLogger - Rcon_Involved - This application is not network Deployed or run in debug mode 
+[INFO] - [10] - 2015-02-01 23:21:19,272 - MonitoringLogger - Rcon_Involved - Initializing SQLite database 
+[WARN] - [10] - 2015-02-01 23:21:19,375 - MonitoringLogger - Rcon_Involved - Generate new table profileList 
+[DEBUG] - [10] - 2015-02-01 23:21:20,832 - MonitoringLogger - Rcon_Involved - Splashscreen window Instanciated 
+[DEBUG] - [10] - 2015-02-01 23:21:21,363 - MonitoringLogger - Rcon_Involved - Application is launched without applicationDeployment 
+[INFO] - [10] - 2015-02-01 23:21:25,843 - MonitoringLogger - Rcon_Involved - Splashscreen timer, versionChecked :True - changelogChoice :True 
+[INFO] - [10] - 2015-02-01 23:21:25,844 - MonitoringLogger - Rcon_Involved - Splashscreen timer, checking if Changelog need to be displayed 
+[DEBUG] - [10] - 2015-02-01 23:21:25,853 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-02-01 23:21:26,875 - MonitoringLogger - Rcon_Involved - Login Window Initialized 
+[DEBUG] - [10] - 2015-02-01 23:21:27,011 - MonitoringLogger - Rcon_Involved - Login window loaded event 
+[DEBUG] - [10] - 2015-02-01 23:21:27,012 - MonitoringLogger - Rcon_Involved - Configuration of LoginWindowloaded : 
+<LoginWindow>
+  <Top>125</Top>
+  <Left>125</Left>
+</LoginWindow> 
+[INFO] - [10] - 2015-02-01 23:21:27,013 - MonitoringLogger - Rcon_Involved - Populate profile list with information from the database 
+[INFO] - [10] - 2015-02-01 23:21:27,013 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[DEBUG] - [10] - 2015-02-01 23:21:27,144 - MonitoringLogger - Rcon_Involved - LoginWindow loaded function ended 
+[DEBUG] - [10] - 2015-02-01 23:21:29,207 - MonitoringLogger - Rcon_Involved - Login window closed 
+[DEBUG] - [10] - 2015-02-01 23:21:29,208 - MonitoringLogger - Rcon_Involved - Saving configuration of LoginWindowloaded 
+[INFO] - [10] - 2015-02-01 23:21:31,512 - MonitoringLogger - Rcon_Involved - RconInvolved is closing, see you ! 

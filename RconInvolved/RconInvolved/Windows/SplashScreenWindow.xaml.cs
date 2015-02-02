@@ -19,11 +19,12 @@
     /// </summary>
     public partial class SplashScreenWindow
     {
-        public Boolean versionChecked = false;
-        private Boolean changelogChoice = false;
+        
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
-        private DispatcherTimer changelogTimer = new DispatcherTimer();
         public Label contentLoading = null;
+        DeploymentWindow deployWindow = null;
+        private Boolean changelogChoice = false;
+
 
         public SplashScreenWindow()
         {
@@ -44,85 +45,17 @@
             //Show splashscreen window
             this.Show();
 
-            //Checks if we are in debug or downloaded version
-            if (Configuration.applicationDeployment != null) AsyncOperations();
-            else
-            {
-                Logger.MonitoringLogger.Debug("Application is launched without applicationDeployment");
-                versionChecked = true;
-                changelogChoice = true;
-            }
-        }
-
-        private async void AsyncOperations()
-        {
-            Logger.MonitoringLogger.Debug("Splashscreen window async operations");
-            ChecksForDeployment();
-        }
-
-        private void ChecksForDeployment()
-        {
+            //deployWindow.Show();
             contentLoading.Content = "Vérification de version";
-            try
-            {
-                /* Checks if we need to make a new deployment */
-
-                UpdateCheckInfo info = null;
-                try
-                {
-                    info = Configuration.applicationDeployment.CheckForDetailedUpdate();
-                }
-                catch (DeploymentDownloadException dde)
-                {
-                    MessageBox.Show("The new version of the application cannot be downloaded at this time. \n\nPlease check your network connection, or try again later. Error: " + dde.Message);
-                }
-                catch (InvalidDeploymentException ide)
-                {
-                    MessageBox.Show("Cannot check for a new version of the application. The ClickOnce deployment is corrupt. Please redeploy the application and try again. Error: " + ide.Message);
-                }
-                catch (InvalidOperationException ioe)
-                {
-                    MessageBox.Show("This application cannot be updated. It is likely not a ClickOnce application. Error: " + ioe.Message);
-                }
-                Logger.MonitoringLogger.Info("Info retrieved with check For Detailed Update : " + info.UpdateAvailable.ToString());
-
-                //Update is available, launch deployment screen !
-                if (info.UpdateAvailable)
-                {
-                    DeploymentWindow deployWindow = new DeploymentWindow(info, this);
-                    deployWindow.Show();
-
-                    Logger.MonitoringLogger.Debug("Splashscreen window begin to wait the version to be checked");
-                    this.contentLoading.Content = "En attente du système de mise à jour";
-                    changelogTimer.Tick += new EventHandler(OnTimerChangelogEnded);
-                    changelogTimer.Interval = new TimeSpan(0, 0, 3);
-                    changelogTimer.Start();
-                }
-                else
-                {
-                    versionChecked = true;
-                    CheckForChangelog();
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error while getting deployment info");
-                Logger.ExceptionLogger.Error(e.ToString());
-                throw;
-            }
+            deployWindow = new DeploymentWindow(this);
         }
 
-        private void OnTimerChangelogEnded(object sender, EventArgs e)
+        //Called from deployment window
+        public async void CheckForChangelog ( Boolean doDisplay)
         {
-            Logger.MonitoringLogger.Debug("Splashscreen is waiting for changelog value to be set");
-            if (!versionChecked) return;
-            CheckForChangelog();
-        }
-
-        private async void CheckForChangelog ()
-        {
+            //Checks if we are in debug or downloaded version
             //First run, ask for the changelog
-            if (Configuration.applicationDeployment.IsFirstRun)
+            if (doDisplay)
             {
                 contentLoading.Content = "Affichage changelog ?";
                 await MessageDialog.ShowAsync(
@@ -169,17 +102,39 @@
          // Specify what you want to happen when the Elapsed event is raised.
         private void OnTimerEnded(object sender, EventArgs e)
          {
-             Logger.MonitoringLogger.Info("Splashscreen timer, versionChecked :" + versionChecked.ToString() + " - changelogChoice :" + changelogChoice.ToString());
              //All verification are done?
-             if (!versionChecked) return;
+             if (deployWindow == null) return;
+             Logger.MonitoringLogger.Info("Splashscreen timer, versionChecked :" + deployWindow.versionChecked.ToString() + " - changelogChoice :" + changelogChoice.ToString());
+             if (!deployWindow.versionChecked) return;
+             contentLoading.Content = "Attente fin de déploiement";
              Logger.MonitoringLogger.Info("Splashscreen timer, checking if Changelog need to be displayed");
-             if (!changelogChoice) return;
 
-             contentLoading.Content = "Lancement du RconInvolved";
-             dispatcherTimer.Stop();
-             this.loadingBarSplashScreen.IsEnabled = false;
-             new LoginWindow().Show();
-             this.Close();
+             if (!deployWindow.deployEnded) return;
+             //Checks if restart is needed ,and then stop eveything !
+             if (deployWindow.restartNeeded)
+             {
+                 dispatcherTimer.Stop();
+                 deployWindow.Close();
+                 contentLoading.Content = "Rédémarrage pour mise à jour !";
+                 //TO DO, redémarrage ici
+                 System.Windows.Forms.Application.Restart();
+                 this.Close();
+                 System.Environment.Exit(0);        //Destroy this window
+             }
+             else
+             {
+                 if (!changelogChoice) return;
+
+                 //Ready to go ! close deployment window as it is not needed anymore
+                 deployWindow.Close();
+
+                 contentLoading.Content = "Lancement du RconInvolved";
+                 dispatcherTimer.Stop();
+                 this.loadingBarSplashScreen.IsEnabled = false;
+                 new LoginWindow().Show();
+                 this.Close();
+             }
+
          }
     }
 }
