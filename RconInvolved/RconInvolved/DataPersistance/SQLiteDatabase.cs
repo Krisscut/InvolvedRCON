@@ -24,7 +24,7 @@ namespace RconInvolved.DataPersistance
         public SQLiteDatabase()
         {
             Logger.MonitoringLogger.Info("Instanciating Sqlite Database");
-            dbConnection = "Data Source=" + DATABASE_LOCAL_FILE_PATH + SQLITE_DATABASE_FILENAME;
+            dbConnection = "Data Source=" + DATABASE_FILE_PATH + SQLITE_DATABASE_FILENAME;
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace RconInvolved.DataPersistance
             try
             {
                 CreateSqliteFile();
-                String dbToBuild = String.Format("Data Source={0}", DATABASE_LOCAL_FILE_PATH+ SQLITE_DATABASE_FILENAME);
+                String dbToBuild = String.Format("Data Source={0}", DATABASE_FILE_PATH + SQLITE_DATABASE_FILENAME);
                 String query = "CREATE TABLE IF NOT EXISTS profileList (rowID INTEGER PRIMARY KEY AUTOINCREMENT, profilName VARCHAR(200), hostname VARCHAR(200), port VARCHAR(20), password VARCHAR(200), autoReconnect VARCHAR(50))";
                 CreateTableIfNotExists(dbToBuild, query);
             }

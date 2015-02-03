@@ -7,7 +7,7 @@
               xmlns:params="http://schemas.codeplex.com/elysium/params"
               xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
               Title="InvolvedRCON - Deploiement" 
-              Width="330" WindowStyle="None" 
+              Width="340" WindowStyle="None" 
             IsBusy="True" 
             HasDropShadow="True" 
             AllowsTransparency="True" 
@@ -15,8 +15,10 @@
             ResizeMode="NoResize" 
               WindowStartupLocation="CenterScreen" 
               TaskbarIsBusy="True" 
-              TitleBarVisibility="Visible" SizeToContent="Height"
-            MaxHeight="470"
+              TitleBarVisibility="Collapsed" SizeToContent="Height"
+            MaxHeight="445" Foreground="#FFF9ECEC"
+            
+        
                >
     <Grid>
         <Grid.RowDefinitions>
@@ -34,7 +36,7 @@
                Margin="{Binding (params:General.BoldPaddingValue), ConverterParameter=Left\, Top\, Right, Converter={StaticResource DoubleToThicknessConverter}, Mode=OneWay, RelativeSource={RelativeSource Self}}"/>
 
         <TextBlock Grid.Row="1"  
-                   Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
+                   Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
                    Margin="{Binding (params:General.BoldPaddingValue), ConverterParameter=Left\, Top\, Right, Converter={StaticResource DoubleToThicknessConverter}, Mode=OneWay, RelativeSource={RelativeSource Self}}"
                    Style="{StaticResource HeaderTextStyle}" 
                    ><Run Language="fr-fr" Text="Mise à jour software"/></TextBlock>
@@ -50,7 +52,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="250"/>
                 <RowDefinition Height="Auto"/>
-                
+
             </Grid.RowDefinitions>
             <extra:Accordion x:Name="Accordion"
                              Height="225"
@@ -71,56 +73,61 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="43"/>
-                            <RowDefinition Height="25*"/>
-                            <RowDefinition Height="18*"/>
+                            <RowDefinition Height="31"/>
+                            <RowDefinition Height="47*"/>
+                            <RowDefinition Height="53*"/>
                         </Grid.RowDefinitions>
 
                         <TextBlock Grid.ColumnSpan="4"
-                    		Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
+                    		Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
                     		Style="{StaticResource NormalTextStyle}" 
-                    		TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="306"><Run Text="Nouvelle mise à jour disponible ! "/><Run Language="fr-fr" Text="Voici les informations de versions"/></TextBlock>
+                    		TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="306" Margin="6,0,8,0"><Run Text="Nouvelle mise à jour disponible ! "/><Run Language="fr-fr" Text="Voici les informations de versions"/></TextBlock>
                         <Label Content="Version" Grid.Row="1"
-                               Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                               Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}" 
+                               Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
+                               Margin="6,6,5.5,6" 
                                 />
                         <TextBox x:Name="LabelVersion"
+                             Width="55"
                              Grid.Row="1" 
                              Grid.Column="1" 
                              Text=""
-                             VerticalAlignment="Center" Height="22"
-                             Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"/>
+                             VerticalAlignment="Center" Height="22" 
+                             Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}"
+                             />
                         <Label Content="Taille (Mo)" 
                                Grid.Row="2"
-                               Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
+                              Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
                                Margin="6,6,5.5,6"/>
                         <TextBox x:Name="LabelSizeUpdate"
+                             Width="55"
                              Grid.Row="2" 
                              Grid.Column="1" 
-                             Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}" 
+                             Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
                              Text=""
                              VerticalAlignment="Center" Height="22"
                              />
-                        
+
                         <Label
                                 Content=" Requise" Grid.Column="2" Grid.Row="1"
-                               Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                               Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}" />
+                               Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
+                               Margin="6,6,4.5,6" />
                         <CheckBox x:Name="CheckBoxRequired"
-                                  Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                  Grid.Column="3" 
+                                  Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
                         <Label
                                 Content="Version Min" Grid.Column="2" Grid.Row="2"
-                               Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:OverlayWindow}}}"
-                               Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}" />
+                               Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
+                               Margin="6,6,4.5,6" />
                         <TextBox x:Name="LabelRequiredVersion"
+                                 Width="55"
                              Grid.Row="2" 
                              Grid.Column="3" 
-                             Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}" 
+                             Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
                              Text=""
                              VerticalAlignment="Center" Height="22"
                              />
-                        
+
                     </Grid>
                 </extra:AccordionItem>
                 <extra:AccordionItem>
@@ -171,15 +178,15 @@
                 <metro:CommandButton x:Name="OkCommandButton" 
                                      Click="OkCommandButton_Click"
                                      Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                                     Style="{StaticResource OkCommandButtonStyle}" Visibility="Visible"/>
+                                     Style="{StaticResource OkCommandButtonStyle}" Visibility="Visible" ToolTip="Lance MAJ"/>
                 <metro:CommandButton x:Name="CancelCommandButton" 
                                      Click="CancelCommandButton_Click"
                                      Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                                     Style="{StaticResource CancelCommandButtonStyle}" Visibility="Visible"/>
+                                     Style="{StaticResource CancelCommandButtonStyle}" Visibility="Visible" ToolTip="Annule la mise à jour"/>
                 <metro:CommandButton x:Name="CloseCommandButton" 
                                      Click="OkCommandButton_Click"
                                      Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                                     Style="{StaticResource CloseCommandButtonStyle}" Visibility="Visible"/>
+                                     Style="{StaticResource CloseCommandButtonStyle}" Visibility="Visible" ToolTip="Fermer la fenetre"/>
             </extra:AnimatedWrapPanel>
         </Grid>
 

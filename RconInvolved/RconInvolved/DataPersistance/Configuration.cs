@@ -22,7 +22,7 @@ namespace RconInvolved.DataPersistance
         public static ApplicationDeployment applicationDeployment = null;
 
         //Path vars
-        public static String CONFIGURATION_FILE_PATH = AppDomain.CurrentDomain.BaseDirectory + "Data\\Conf\\";
+        public static String CONFIGURATION_FILE_PATH = "Data\\Conf\\";
         public static String CONFIGURATION_FILENAME = "RconInvolved.conf";
         public static String ROOT_NAME = "RconInvolved";
 

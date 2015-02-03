@@ -83,7 +83,7 @@ namespace RconInvolved.Windows
             {
                 case UpdateStatuses.NoUpdateAvailable:
                     // No update available, do nothing
-                    MessageBox.Show("There's no update, thanks...");
+                    //MessageBox.Show("There's no update, thanks...");
                     Logger.MonitoringLogger.Info("No update available for the application");
                     this.splashScreen.CheckForChangelog(Configuration.applicationDeployment.IsFirstRun);
                     //Checks for changelog !
@@ -94,7 +94,7 @@ namespace RconInvolved.Windows
                     this.Show();
                     UpdateInformationUI(false);
                     Logger.MonitoringLogger.Info("Update detected !");
-                    MessageBox.Show("An update is available. Would you like to update the application now?", "Update available");
+                    //MessageBox.Show("An update is available. Would you like to update the application now?", "Update available");
                     //if (dialogResult == DialogResult.OK)
                         //UpdateApplication();
                     break;
@@ -102,40 +102,40 @@ namespace RconInvolved.Windows
                     this.Show();
                     UpdateInformationUI(true);
                     Logger.MonitoringLogger.Info("Update is required to use the application");
-                    MessageBox.Show("A required update is available, which will be installed now", "Update available");
+                    //MessageBox.Show("A required update is available, which will be installed now", "Update available");
                     //UpdateApplication();
                     break;
                 case UpdateStatuses.NotDeployedViaClickOnce:
                     Logger.MonitoringLogger.Warn("Application not deployed with clickonce");
-                    MessageBox.Show("Is this deployed via ClickOnce?");
+                    //MessageBox.Show("Is this deployed via ClickOnce?");
                     versionChecked = true;
                     deployEnded = true;
                     this.splashScreen.CheckForChangelog(false);
                     break;
                 case UpdateStatuses.DeploymentDownloadException:
                     Logger.MonitoringLogger.Error("Can't check for update");
-                    MessageBox.Show("Whoops, couldn't retrieve info on this app...");
+                    //MessageBox.Show("Whoops, couldn't retrieve info on this app...");
                     versionChecked = true;
                     deployEnded = true;
                     this.splashScreen.CheckForChangelog(false);
                     break;
                 case UpdateStatuses.InvalidDeploymentException:
                     Logger.MonitoringLogger.Fatal("Clickonce deployment is corrupt");
-                    MessageBox.Show("Cannot check for a new version. ClickOnce deployment is corrupt!");
+                    //MessageBox.Show("Cannot check for a new version. ClickOnce deployment is corrupt!");
                     versionChecked = true;
                     deployEnded = true;
                     this.splashScreen.CheckForChangelog(false);
                     break;
                 case UpdateStatuses.InvalidOperationException:
                     Logger.MonitoringLogger.Warn("Not a click once application");
-                    MessageBox.Show("This application cannot be updated. It is likely not a ClickOnce application.");
+                    //MessageBox.Show("This application cannot be updated. It is likely not a ClickOnce application.");
                     versionChecked = true;
                     deployEnded = true;
                     this.splashScreen.CheckForChangelog(false);
                     break;
                 default:
                     Logger.MonitoringLogger.Fatal("Default case deployment, this is impossible!");
-                    MessageBox.Show("Huh?");
+                    //MessageBox.Show("Huh?");
                     break;
             }
         }
@@ -191,46 +191,20 @@ namespace RconInvolved.Windows
             try
             {
                 UpdateCheckInfo info = Configuration.applicationDeployment.CheckForDetailedUpdate();
-                try
-                {
+
                     this.loadingBarSplashScreen.Visibility = System.Windows.Visibility.Collapsed;
                     Logger.MonitoringLogger.Debug("Get info status");
-                    try
-                    {
-                         this.LabelRequiredVersion.Text = info.MinimumRequiredVersion.ToString();
-                       }
-                    catch (Exception e)
-                    {
-
-                        MessageBox.Show("FATAL ERROR IN UPDATE UI REQUIRED VERSION TEXT");
-                        Logger.ExceptionLogger.Fatal("Fatal error wUI REQUIRED VERSION! \n" + e.ToString());
-                    }
-
-                   
-                    this.LabelVersion.Text = info.AvailableVersion.ToString();
                     this.CheckBoxRequired.IsChecked = required;
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show("FATAL ERROR IN UPDATE UI FUNCTION TEXT");
-                    Logger.ExceptionLogger.Fatal("Fatal error when updating UItext  ! \n" + e.ToString());
-                }
-
-                try
-                {
+                    this.LabelVersion.Text = info.AvailableVersion.ToString();
                     this.LabelSizeUpdate.Text = (info.UpdateSizeBytes / 1048576).ToString();
                     Logger.MonitoringLogger.Debug("update visibility");
                     this.LabelButton.Visibility = System.Windows.Visibility.Visible;
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show("FATAL ERROR IN UPDATE UI FUNCTION TEXT size");
-                    Logger.ExceptionLogger.Fatal("Fatal error when updating UI size ! \n" + e.ToString());
-                }
+
                 if (required)
                 {
                     try
                     {
+                        this.LabelRequiredVersion.Text = info.MinimumRequiredVersion.ToString();
                         this.CancelCommandButton.Visibility = System.Windows.Visibility.Collapsed;
                         this.OkCommandButton.Visibility = System.Windows.Visibility.Visible;
                         this.CloseCommandButton.Visibility = System.Windows.Visibility.Collapsed;
@@ -246,6 +220,7 @@ namespace RconInvolved.Windows
                 {
                     try
                     {
+                        this.LabelRequiredVersion.Text = "N/A";
                         this.CancelCommandButton.Visibility = System.Windows.Visibility.Visible;
                         this.CloseCommandButton.Visibility = System.Windows.Visibility.Collapsed;
                         this.OkCommandButton.Visibility = System.Windows.Visibility.Visible;
@@ -381,12 +356,19 @@ namespace RconInvolved.Windows
 
         private void CloseCommandButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Not implemented yet");
+            this.Hide();
+            this.deployEnded = true;
+            this.restartNeeded = true;
         }
 
+        /**
+         *  Cancel the update !
+         * */
         private void CancelCommandButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Not implemented yet");
+            this.Hide();
+            versionChecked = true;
+            this.deployEnded = true;
         }
 
         private void OkCommandButton_Click(object sender, RoutedEventArgs e)
@@ -409,10 +391,16 @@ namespace RconInvolved.Windows
 
         private void updateRconWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            MessageBox.Show("The application has been upgraded, and will now restart.");
-            this.Hide();
-            this.deployEnded = true;
+            //MessageBox.Show("The application has been upgraded, and will now restart.");
+            //this.Hide();
+            this.loadingBarSplashScreen.Visibility = System.Windows.Visibility.Collapsed;
+            this.ActualContent.Content = "Mise à jour terminée, l'application va redémarrer";
+            this.LabelButton.Content = "Fermer la fenetre pour continuer";
             this.restartNeeded = true;
+
+            this.CancelCommandButton.Visibility = System.Windows.Visibility.Collapsed;
+            this.OkCommandButton.Visibility = System.Windows.Visibility.Collapsed;
+            this.CloseCommandButton.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void updateRconWorker_DoWork(object sender, DoWorkEventArgs e)
