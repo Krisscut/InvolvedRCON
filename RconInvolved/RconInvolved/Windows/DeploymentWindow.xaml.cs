@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Deployment.Application;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -196,7 +197,7 @@ namespace RconInvolved.Windows
                     Logger.MonitoringLogger.Debug("Get info status");
                     this.CheckBoxRequired.IsChecked = required;
                     this.LabelVersion.Text = info.AvailableVersion.ToString();
-                    this.LabelSizeUpdate.Text = (info.UpdateSizeBytes / 1048576).ToString();
+                    this.LabelSizeUpdate.Text = (info.UpdateSizeBytes / 1048576).ToString();            //bytes to Mo
                     Logger.MonitoringLogger.Debug("update visibility");
                     this.LabelButton.Visibility = System.Windows.Visibility.Visible;
 
@@ -242,116 +243,6 @@ namespace RconInvolved.Windows
                 Logger.ExceptionLogger.Fatal("Fatal error when updating UI ! \n" + e.ToString());
             }
 
-        }
-
-        private void ChecksForDeployment()
-        {
-            try
-            {
-                /* Checks if we need to make a new deployment */
-
-                UpdateCheckInfo info = null;
-                try
-                {
-                    info = Configuration.applicationDeployment.CheckForDetailedUpdate();
-                }
-                catch (DeploymentDownloadException dde)
-                {
-                    MessageBox.Show("The new version of the application cannot be downloaded at this time. \n\nPlease check your network connection, or try again later. Error: " + dde.Message);
-                }
-                catch (InvalidDeploymentException ide)
-                {
-                    MessageBox.Show("Cannot check for a new version of the application. The ClickOnce deployment is corrupt. Please redeploy the application and try again. Error: " + ide.Message);
-                }
-                catch (InvalidOperationException ioe)
-                {
-                    MessageBox.Show("This application cannot be updated. It is likely not a ClickOnce application. Error: " + ioe.Message);
-                }
-                Logger.MonitoringLogger.Info("Info retrieved with check For Detailed Update : " + info.UpdateAvailable.ToString());
-
-                //Update is available, launch deployment screen !
-                if (info.UpdateAvailable)
-                {
-                    //DeploymentWindow deployWindow = new DeploymentWindow(this);
-                    //deployWindow.Show();
-
-                    Logger.MonitoringLogger.Debug("Splashscreen window begin to wait the version to be checked");
-                    //this.contentLoading.Content = "En attente du système de mise à jour";
-                }
-                else
-                {
-                    versionChecked = true;
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error while getting deployment info");
-                Logger.ExceptionLogger.Error(e.ToString());
-                throw;
-            }
-        } 
-
-        private void InstallUpdateSyncWithInfo()
-        {
-                Boolean doUpdate = true;
-                ApplicationDeployment ad = Configuration.applicationDeployment;
-
-                if (!infoUpdate.IsUpdateRequired)
-                {
-                    Logger.MonitoringLogger.Debug("Update not required");
-                    //Here, set data information for a non vital version
-                    MessageDialog.ShowAsync(
-                    "Nouvelle version",
-                    "Version non requise mais installée en attendant une gestion plus poussée : nouvelle version : " + infoUpdate.MinimumRequiredVersion.ToString(),
-                    MessageBoxButton.OK,
-                    MessageDialogType.Light,
-                    this);
-                    doUpdate = true;
-                }
-                else
-                {
-                    // Display a message that the app MUST reboot. Display the minimum required version.
-                    /*MessageBox.Show("This application has detected a mandatory update from your current " +
-                        "version to version " + info.MinimumRequiredVersion.ToString() +
-                        ". The application will now install the update and restart.",
-                        "Update Available", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                        * */
-                    Logger.MonitoringLogger.Debug("Update required");
-                    MessageDialog.ShowAsync(
-                    "Nouvelle version requise",
-                    "Cette nouvelle version est obligatoire, la mise à jour va se faire automatiquement vers la version " + infoUpdate.MinimumRequiredVersion.ToString(),
-                    MessageBoxButton.OK,
-                    MessageDialogType.Light,
-                    this);
-                }
-
-                if (doUpdate)
-                {
-                    try
-                    {
-                        Logger.MonitoringLogger.Warn("Application update is starting");
-                        ad.Update();
-                        MessageDialog.ShowAsync(
-                            "Installation terminée",
-                            "Installation terminée, redémarrage !",
-                            MessageBoxButton.OK,
-                            MessageDialogType.Light,
-                            this);
-                        Logger.MonitoringLogger.Warn("Application update ended, restarting application !");
-                        System.Windows.Forms.Application.Restart();
-                    }
-                    catch (DeploymentDownloadException dde)
-                    {
-                        MessageBox.Show("Cannot install the latest version of the application. \n\nPlease check your network connection, or try again later. Error: " + dde);
-                        versionChecked = true;
-                        return;
-                    }
-                }
-                
-                //No update : version is checked !
-                versionChecked = true;
-                this.Close();
         }
 
         private void CloseCommandButton_Click(object sender, RoutedEventArgs e)
@@ -414,6 +305,19 @@ namespace RconInvolved.Windows
                 MessageBox.Show("Cannot install the latest version of the application. nnPlease check your network connection, or try again later. Error: " + dde);
                 return;
             }
+        }
+
+        private void HUB_changelog_click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://krisscut.legtux.org/applications/RconInvolved/changelog/changelog.html");
+        }
+
+        private void Version_changelog_click(object sender, RoutedEventArgs e)
+        {
+            UpdateCheckInfo info = ApplicationDeployment.CurrentDeployment.CheckForDetailedUpdate();
+            Version version = info.AvailableVersion;
+            String URL_CHANGELOG = String.Format("http://krisscut.legtux.org/applications/RconInvolved/changelog/content/changelog_{0}_{1}_{2}.html", version.Major, version.Minor, version.Build);
+            Process.Start(URL_CHANGELOG);
         }
     }
 }

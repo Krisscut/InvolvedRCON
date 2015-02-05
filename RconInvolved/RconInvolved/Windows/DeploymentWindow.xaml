@@ -134,15 +134,97 @@
                     <extra:AccordionItem.Header>
                         <TextBlock Text="Accès au changelog"/>
                     </extra:AccordionItem.Header>
-                    <TextBlock Style="{StaticResource NormalTextStyle}" 
-                           Text="Content 2"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="58*"/>
+                            <RowDefinition Height="23*"/>
+                            <RowDefinition Height="50*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock  
+                           Grid.ColumnSpan ="2"
+                           Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
+                           Margin="{Binding (params:General.BoldPaddingValue), ConverterParameter=Left\, Top\, Right, Converter={StaticResource DoubleToThicknessConverter}, Mode=OneWay, RelativeSource={RelativeSource Self}}"
+                           TextWrapping="Wrap"
+                            ><Run Language="fr-fr" Text="Cette section permet d'acceder aux informations sur les divers changements intervenus entre des versions différentes de l'application. "/></TextBlock>
+
+                        <Label
+                                Content=" Accès Changelog HUB" Grid.Column="0" Grid.Row="1"
+                               Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
+                               Margin="20,4,19,5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="14" Width="122" />
+                        <Label
+                                Content=" Accès changelog version" Grid.Column="1" Grid.Row="1"
+                               Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}" 
+                               Margin="17,4,16,5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="14" Width="134" />
+                        <Button Content="HUB" 
+                                HorizontalAlignment="Left" 
+                                Margin="42,10,0,0" 
+                                Grid.Row="2" 
+                                VerticalAlignment="Top" 
+                                Width="75" Height="31"
+                                Click="HUB_changelog_click"/>
+                        <Button Content="Version" 
+                                Grid.Column="1" 
+                                HorizontalAlignment="Left" 
+                                Margin="46,10,0,0" 
+                                Grid.Row="2" 
+                                VerticalAlignment="Top" 
+                                Width="75" Height="31"
+                                Click="Version_changelog_click"/>
+                    </Grid>
                 </extra:AccordionItem>
                 <extra:AccordionItem>
                     <extra:AccordionItem.Header>
                         <TextBlock Text="Autres informations"/>
                     </extra:AccordionItem.Header>
-                    <TextBlock Style="{StaticResource NormalTextStyle}" 
-                           Text="Content 3"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="159*"/>
+                            <ColumnDefinition Width="169*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="41*"/>
+                            <RowDefinition Height="47*"/>
+                            <RowDefinition Height="43*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="{Binding Converter={StaticResource DoubleToThicknessConverter}, ConverterParameter='Left, Right', RelativeSource={RelativeSource Self}, Path=(params:General.BoldPaddingValue), Mode=OneWay}"
+                            Style="{StaticResource AccentTextStyle}" 
+                            Text="Auteur" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <TextBlock 
+                            Grid.Column="1"
+                            Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                            Style="{StaticResource NormalTextStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Hyperlink NavigateUri="http://krisscut.legtux.org/applications/RconInvolved/about.html" TargetName="About">Krisscut</Hyperlink>
+                        </TextBlock>
+                        <TextBlock 
+                            Grid.Row="1"
+                            Margin="{Binding Converter={StaticResource DoubleToThicknessConverter}, ConverterParameter='Left, Right', RelativeSource={RelativeSource Self}, Path=(params:General.BoldPaddingValue), Mode=OneWay}"
+                            Style="{StaticResource AccentTextStyle}" 
+                            Text="Site" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <TextBlock 
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                            Style="{StaticResource NormalTextStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Hyperlink NavigateUri="http://krisscut.legtux.org/applications/RconInvolved/index.html" TargetName="About">RconInvolved</Hyperlink>
+                        </TextBlock>
+                        <TextBlock 
+                            Grid.Row="2"
+                            Margin="{Binding Converter={StaticResource DoubleToThicknessConverter}, ConverterParameter='Left, Right', RelativeSource={RelativeSource Self}, Path=(params:General.BoldPaddingValue), Mode=OneWay}"
+                            Style="{StaticResource AccentTextStyle}" 
+                            Text="Destinataire" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <TextBlock 
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
+                            Style="{StaticResource NormalTextStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Hyperlink NavigateUri="http://involved-gaming.com/" TargetName="About">Involved-Gaming</Hyperlink>
+                        </TextBlock>
+                    </Grid>
+
                 </extra:AccordionItem>
             </extra:Accordion>
 
@@ -184,7 +266,7 @@
                                      Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
                                      Style="{StaticResource CancelCommandButtonStyle}" Visibility="Visible" ToolTip="Annule la mise à jour"/>
                 <metro:CommandButton x:Name="CloseCommandButton" 
-                                     Click="OkCommandButton_Click"
+                                     Click="CloseCommandButton_Click"
                                      Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
                                      Style="{StaticResource CloseCommandButtonStyle}" Visibility="Visible" ToolTip="Fermer la fenetre"/>
             </extra:AnimatedWrapPanel>

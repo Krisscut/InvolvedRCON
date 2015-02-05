@@ -4,6 +4,7 @@ using RconInvolved.Utils;
 using RconInvolved.Communications.Websockets;
 using System.Windows;
 using System.Deployment.Application;
+using RconInvolved.Ressources;
 
 
 namespace RconInvolved

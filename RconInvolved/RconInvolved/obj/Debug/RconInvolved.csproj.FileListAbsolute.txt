@@ -219,3 +219,7 @@ D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\Over
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolvedApp.g.cs
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved_MarkupCompile.lref
 D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\OverlayViews\CreateProfileOverlayView.baml
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\fr\RconInvolved.resources.dll
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved.Ressources.strings.resources
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved.Ressources.strings.fr.resources
+D:\Mon_Bureau\GitHub repos\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\fr\RconInvolved.resources.dll
