@@ -56,10 +56,6 @@ namespace RconInvolved
             {
                 Configuration.CONFIGURATION_FILE_PATH = AppDomain.CurrentDomain.BaseDirectory + "\\Conf\\";
             }
-
-        
-
         }
     }
-
 }

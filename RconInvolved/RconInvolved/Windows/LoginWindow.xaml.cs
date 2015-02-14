@@ -17,6 +17,8 @@
     using System.Collections.Specialized;
     using Framework.UI.Controls;
     using Framework.UI.Input;
+    using System.Net;
+
     /// <summary>
     /// Logique d'interaction pour LoginWindow.xaml
     /// </summary>
@@ -274,12 +276,55 @@
 
         private void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
+            BattlEyeLoginCredentials loginCredentials = PrepareLoginCredentials();
+
+            MainWindow mainWindow = new MainWindow(loginCredentials, profileSelected);
+
+            if (mainWindow.battleNetClient.Connected)
+            {
+                mainWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageDialog.ShowAsync(
+                        "Connexion impossible",
+                        "Erreur lors de la connexion, vérifier si le serveur est en ligne et vos identifiants !",
+                        MessageBoxButton.OK,
+                        MessageDialogType.Light,
+                        this);
+            }
+            /*
             MessageDialog.ShowAsync(
                         "WIP",
                         "Functionnalité pas encore implémentée !",
                         MessageBoxButton.OK,
                         MessageDialogType.Light,
                         this);
+             */
+        }
+
+        private BattlEyeLoginCredentials PrepareLoginCredentials()
+        {
+            IPAddress host = null;
+            int port = profileSelected.Port;
+            string password = profileSelected.Password;
+            var loginCredentials = new BattlEyeLoginCredentials { };
+            try
+            {
+                IPAddress ip = Dns.GetHostAddresses(profileSelected.Hostname)[0];
+                host = ip;
+                loginCredentials = new BattlEyeLoginCredentials
+                {
+                    Host = host,
+                    Port = port,
+                    Password = password,
+                };
+            }
+            catch (Exception e) {
+                Logger.ExceptionLogger.Error("Attempt to prepareLoginCredentials error : " + profileSelected.ToString() + "\n" + e.ToString());
+            }
+            return loginCredentials;
         }
     }
 }

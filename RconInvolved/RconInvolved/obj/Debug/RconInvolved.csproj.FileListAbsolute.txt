@@ -227,3 +227,9 @@ D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\fr\R
 D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved.Ressources.strings.resources
 D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\RconInvolved.Ressources.strings.fr.resources
 D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\fr\RconInvolved.resources.dll
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\Windows\MainWindow.g.cs
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\Views\PlayerListView.baml
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\Views\PlayerListView.g.cs
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\Views\BanListView.baml
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\Views\BanListView.g.cs
+D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\obj\Debug\Windows\MainWindow.baml

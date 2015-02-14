@@ -163,9 +163,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Communications\BattleNET\BattleNetBanMessage.cs" />
+    <Compile Include="Communications\BattleNET\BattleNetMessage.cs" />
+    <Compile Include="Communications\BattleNET\BattleNetParser.cs" />
+    <Compile Include="Communications\BattleNET\BattleNetPlayersMessage.cs" />
+    <Compile Include="Communications\BattleNET\MutexlistParsedMessageMutex.cs" />
     <Compile Include="Communications\Websockets\TestWebsocket.cs" />
     <Compile Include="DataPersistance\Configuration.cs" />
     <Compile Include="DataPersistance\SQLiteDatabase.cs" />
+    <Compile Include="Models\Ban.cs" />
+    <Compile Include="Models\BanCollection.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\PlayerCollection.cs" />
     <Compile Include="Models\ServerProfile.cs" />
     <Compile Include="Models\ServerProfileCollection.cs" />
     <Compile Include="OverlayViews\CreateConnectionOverlayView.xaml.cs">
@@ -201,13 +210,32 @@
     <Compile Include="Utils\ExceptionHandler.cs" />
     <Compile Include="Utils\Logger.cs" />
     <Compile Include="ViewModels\LoginWindowDataViewModel.cs" />
+    <Compile Include="ViewModels\PlayerListViewModel.cs" />
+    <Compile Include="Views\BanListView.xaml.cs">
+      <DependentUpon>BanListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayerListView.xaml.cs">
+      <DependentUpon>PlayerListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\DeploymentWindow.xaml.cs">
       <DependentUpon>DeploymentWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\BanListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlayerListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\DeploymentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,6 +246,9 @@
     <Compile Include="RconInvolvedApp.xaml.cs">
       <DependentUpon>RconInvolvedApp.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\SplashScreenWindow.xaml.cs">
       <DependentUpon>SplashScreenWindow.xaml</DependentUpon>

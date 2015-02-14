@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\RconInvolvedApp.xaml
-81490089000
+111572229177
 5131065322
-22-86419751
+35-1008586694
 372084573442
-Windows\DeploymentWindow.xaml;Windows\SplashScreenWindow.xaml;OverlayViews\CreateConnectionOverlayView.xaml;OverlayViews\CreateProfileOverlayView.xaml;OverlayViews\CreateProfileOverlayViews\BattleyeView.xaml;OverlayViews\CreateProfileOverlayViews\HelpView.xaml;OverlayViews\CreateProfileOverlayViews\NotificationView.xaml;Windows\LoginWindow.xaml;
+Views\BanListView.xaml;Views\PlayerListView.xaml;Windows\DeploymentWindow.xaml;Windows\MainWindow.xaml;Windows\SplashScreenWindow.xaml;OverlayViews\CreateConnectionOverlayView.xaml;OverlayViews\CreateProfileOverlayView.xaml;OverlayViews\CreateProfileOverlayViews\BattleyeView.xaml;OverlayViews\CreateProfileOverlayViews\HelpView.xaml;OverlayViews\CreateProfileOverlayViews\NotificationView.xaml;Windows\LoginWindow.xaml;
 
 False
 

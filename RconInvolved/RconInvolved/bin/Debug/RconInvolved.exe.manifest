@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vQkvqS1uO9m415+SWE9SqJJWDH7ljh5ZEDlElvfWljc=</dsig:DigestValue>
+        <dsig:DigestValue>/B5aQbhlWmPF79c0U3rb4mQkFpM5fXAbE7CK6f+eQ7Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -271,14 +271,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RconInvolved.exe" size="2563072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RconInvolved.exe" size="2586112">
       <assemblyIdentity name="RconInvolved" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>muvLyPUtckppYNtDrJyj9fWc3nG/OMk5QdmPoYvmtYo=</dsig:DigestValue>
+        <dsig:DigestValue>W+tu3FmwpvODLCHZCAA+67AwyfZOdUGyEKTljP2bZxs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -290,7 +290,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/PQ+SYYb8iEhfWEK+UlCrsoQReTmBlFE4BK6OSVy7pI=</dsig:DigestValue>
+        <dsig:DigestValue>IyL+WUmOouJs84Ol8Zt5aJ80OniebvpucKBTYuqQ4R8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

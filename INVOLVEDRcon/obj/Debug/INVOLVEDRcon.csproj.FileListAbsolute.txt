@@ -43,3 +43,6 @@ D:\Bureau\GitHub repos\InvolvedRCON\INVOLVEDRcon\obj\Debug\MainWindow.g.cs
 D:\Bureau\GitHub repos\InvolvedRCON\INVOLVEDRcon\obj\Debug\InvolvedRCON.g.resources
 D:\Bureau\GitHub repos\InvolvedRCON\INVOLVEDRcon\obj\Debug\InvolvedRCON.Properties.Resources.resources
 D:\Bureau\GitHub repos\InvolvedRCON\INVOLVEDRcon\obj\Debug\INVOLVEDRcon.csproj.GenerateResource.Cache
+D:\Mon Bureau\Repositories\InvolvedRCON\INVOLVEDRcon\bin\Debug\InvolvedRCON.exe.config
+D:\Mon Bureau\Repositories\InvolvedRCON\INVOLVEDRcon\obj\Debug\InvolvedRCON.exe
+D:\Mon Bureau\Repositories\InvolvedRCON\INVOLVEDRcon\obj\Debug\InvolvedRCON.pdb

@@ -300,9 +300,9 @@ namespace BattleNET
                     int timeoutClient = (int)(DateTime.Now - packetSent).TotalSeconds;
                     int timeoutServer = (int)(DateTime.Now - packetReceived).TotalSeconds;
 
-                    if (timeoutClient >= 5)
+                    if (timeoutClient >= 10)
                     {
-                        if (timeoutServer >= 20)
+                        if (timeoutServer >= 60)
                         {
                             Disconnect(BattlEyeDisconnectionType.ConnectionLost);
                             keepRunning = true;
