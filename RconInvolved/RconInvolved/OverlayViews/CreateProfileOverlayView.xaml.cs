@@ -39,6 +39,12 @@ namespace RconInvolved.OverlayViews
         private BattleyeView battleEyeView;
         private HelpView helpView;
         private NotificationView notificationView;
+        private LoginWindow loginWindow;
+        private System.Windows.Window window;
+        private LoginWindowDataViewModel loginDataView;
+
+        /** Uses in case of modify action*/
+        private ServerProfile profileSelected;
 
         public CreateProfileOverlayView(LoginWindow value, System.Windows.Window master, LoginWindowDataViewModel dataView)
         {
@@ -70,6 +76,44 @@ namespace RconInvolved.OverlayViews
             tabControl.Items.Add(notificationPage);
         }
 
+        public CreateProfileOverlayView(LoginWindow loginWindow, System.Windows.Window window, LoginWindowDataViewModel loginDataView, ServerProfile profileSelected)
+        {
+            InitializeComponent();
+            this.login = loginWindow;
+            this.Owner = window;
+            this.dataView = loginDataView;
+            this.profileSelected = profileSelected;
+
+            //Initialize Tab items for the controller
+            tabControl = this.TabController;
+
+            helpPage = new TabItem();
+            helpPage.Header = "Validation";
+            helpView = new HelpView(loginWindow, dataView, this);
+            helpPage.Content = helpView;
+
+            battleEyePage = new TabItem();
+            battleEyePage.Header = "BattleEye";
+            battleEyeView = new BattleyeView(loginWindow, dataView, this);
+            battleEyePage.Content = battleEyeView;
+
+            //Updates content of the battleye using data from profile selected
+            battleEyeView.AutoReconnect.IsChecked = profileSelected.AutoReconnect;
+            battleEyeView.ProfilNameValue.Text = profileSelected.ProfilName;
+            battleEyeView.HostnameValue.Text = profileSelected.Hostname;
+            battleEyeView.PortValue.Text = profileSelected.Port.ToString();
+            battleEyeView.PasswordValue.Password = profileSelected.Password;
+
+            notificationPage = new TabItem();
+            notificationPage.Header = "Notification";
+            notificationView = new NotificationView();
+            notificationPage.Content = notificationView;
+
+            tabControl.Items.Add(helpPage);
+            tabControl.Items.Add(battleEyePage);
+            tabControl.Items.Add(notificationPage);
+        }
+
         private void TabControl_Selected(object sender, RoutedEventArgs e)
         {
 
@@ -79,8 +123,7 @@ namespace RconInvolved.OverlayViews
         {
             bool isValid = true;
 
-            try
-            {
+            try {
                 string profilName = battleEyeView.ProfilNameValue.Text;
                 string hostname = battleEyeView.HostnameValue.Text;
                 int port = Int32.Parse(battleEyeView.PortValue.Text);
@@ -88,8 +131,7 @@ namespace RconInvolved.OverlayViews
                 bool autoReconnect = battleEyeView.AutoReconnect.IsChecked;
 
                 //Profil name
-                if (battleEyeView.ProfilNameValue.Text == "")
-                {
+                if (battleEyeView.ProfilNameValue.Text == "") {
                     isValid = false;
                     MessageBoxResult result = await MessageDialog.ShowAsync(
                         "Erreur dans les entrées utilisateurs",
@@ -99,14 +141,10 @@ namespace RconInvolved.OverlayViews
                         this);
                 }
 
-                if (isValid)
-                {
+                if (isValid) {
                     this.Close();
                     this.login.TaskbarProgressState = System.Windows.Shell.TaskbarItemProgressState.None;
                     login.TaskbarProgressValue = 0;
-
-                    ServerProfile serverProfile = new ServerProfile(profilName, hostname, port, password, autoReconnect);
-                    dataView.ServersProfiles.Add(serverProfile);
 
                     db = new SQLiteDatabase();
                     Dictionary<String, String> data = new Dictionary<String, String>();
@@ -117,17 +155,34 @@ namespace RconInvolved.OverlayViews
                     data.Add("autoReconnect", autoReconnect.ToString());
                     
                     try {
-                        //First, search for and existing profile with this data
+                        if (profileSelected != null) {  //Update
+                            Boolean updateStatus = db.Update("profileList", data, String.Format("profileList.profilName = '{0}'", profileSelected.ProfilName));
+                            profileSelected.ProfilName = profilName;
+                            profileSelected.Port = port;
+                            profileSelected.Hostname = hostname;
+                            profileSelected.AutoReconnect = autoReconnect;
+                            profileSelected.Password = password;
 
-                        db.Insert("profileList", data);
-                        NotifyBox.Show(
-                           (DrawingImage)this.FindResource("SearchDrawingImage"),
-                           "Nouveau profil serveur",
-                           "Un nouveau profil serveur a été créé avec succès !",
-                           false);
+
+                            NotifyBox.Show(
+                               (DrawingImage)this.FindResource("SearchDrawingImage"),
+                               "Profil serveur mis à jour",
+                               "Le profil "+ profilName + " a été mis à jour avec succès !",
+                               false);
+                            login.UpdateUIUsingCollection();
+                        }
+                        else {
+                            ServerProfile serverProfile = new ServerProfile(profilName, hostname, port, password, autoReconnect);
+                            dataView.ServersProfiles.Add(serverProfile);
+                            db.Insert("profileList", data);
+                            NotifyBox.Show(
+                               (DrawingImage)this.FindResource("SearchDrawingImage"),
+                               "Nouveau profil serveur",
+                               "Un nouveau profil serveur a été créé avec succès !",
+                               false);
+                        }
                     }
-                    catch (Exception e)
-                    {
+                    catch (Exception e){
                         MessageDialog.ShowAsync(
                         "Erreur d'insertion dans la base de donnée",
                         "Erreur lors de l'insertion en base de donnée ! Informations de debug :\n" + e.ToString(),

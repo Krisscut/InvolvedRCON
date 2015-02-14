@@ -1,0 +1,52 @@
+[ERROR] - [10] - 2015-02-14 12:26:38,697 - ExceptionLogger - Rcon_Involved - Attempt to update database error :
+System.Data.SQLite.SQLiteException (0x80004005): SQL logic error or missing database
+no such column: NouveauProfil
+   à System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   à System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   à System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   à System.Data.SQLite.SQLiteDataReader.NextResult()
+   à System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   à System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   à RconInvolved.DataPersistance.SQLiteDatabase.ExecuteNonQuery(String sql) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 155
+   à RconInvolved.DataPersistance.SQLiteDatabase.Update(String tableName, Dictionary`2 data, String where) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 201 
+[ERROR] - [10] - 2015-02-14 12:33:52,839 - ExceptionLogger - Rcon_Involved - Attempt to update database error :
+System.Data.SQLite.SQLiteException (0x80004005): SQL logic error or missing database
+no such column: TestProfil
+   à System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   à System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   à System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   à System.Data.SQLite.SQLiteDataReader.NextResult()
+   à System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   à System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   à RconInvolved.DataPersistance.SQLiteDatabase.ExecuteNonQuery(String sql) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 155
+   à RconInvolved.DataPersistance.SQLiteDatabase.Update(String tableName, Dictionary`2 data, String where) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 201 
+[ERROR] - [10] - 2015-02-14 12:37:53,967 - ExceptionLogger - Rcon_Involved - Attempt to update database error :
+System.Data.SQLite.SQLiteException (0x80004005): SQL logic error or missing database
+no such column: TestProfil
+   à System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   à System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   à System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   à System.Data.SQLite.SQLiteDataReader.NextResult()
+   à System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   à System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   à RconInvolved.DataPersistance.SQLiteDatabase.ExecuteNonQuery(String sql) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 155
+   à RconInvolved.DataPersistance.SQLiteDatabase.Update(String tableName, Dictionary`2 data, String where) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 201 
+[ERROR] - [10] - 2015-02-14 12:42:26,871 - ExceptionLogger - Rcon_Involved - Attempt to update database error :
+System.Data.SQLite.SQLiteException (0x80004005): SQL logic error or missing database
+no such column: TestProfil
+   à System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   à System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   à System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   à System.Data.SQLite.SQLiteDataReader.NextResult()
+   à System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   à System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   à RconInvolved.DataPersistance.SQLiteDatabase.ExecuteNonQuery(String sql) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 155
+   à RconInvolved.DataPersistance.SQLiteDatabase.Update(String tableName, Dictionary`2 data, String where) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 201 

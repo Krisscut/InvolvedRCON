@@ -155,11 +155,10 @@
                        Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type extra:Window}}}"
                         HorizontalAlignment="Center" VerticalAlignment="Center"
                        />
-                    <TextBox x:Name="PasswordValue"
+                    <PasswordBox  x:Name="PasswordValue"
                          Grid.Row="2" 
                          Grid.Column="2" 
                          Margin="{Binding RelativeSource={RelativeSource Self}, Path=(params:General.BoldPadding), Mode=OneWay}"
-                         Text=""
                          VerticalAlignment="Center" Focusable="False"/>
                 </Grid>
 

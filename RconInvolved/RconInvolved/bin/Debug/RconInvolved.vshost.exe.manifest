@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="RconInvolved.exe" version="0.1.0.67" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="RconInvolved.exe" version="0.1.0.70" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="favicon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8JT0XvW00FOTSRW74OZItBlpyHXeFK/Hz8dSDQzHKcs=</dsig:DigestValue>
+        <dsig:DigestValue>vQkvqS1uO9m415+SWE9SqJJWDH7ljh5ZEDlElvfWljc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -271,14 +271,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RconInvolved.exe" size="2561024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RconInvolved.exe" size="2563072">
       <assemblyIdentity name="RconInvolved" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LOiCU3jr0Vq72kO7TDUMk9lmT0S1T4plNj1xXp+Kow0=</dsig:DigestValue>
+        <dsig:DigestValue>muvLyPUtckppYNtDrJyj9fWc3nG/OMk5QdmPoYvmtYo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -290,7 +290,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fZGy1bVN1CnAQFaprNg2RHYUSoO5CcrRWhaDFO60x7g=</dsig:DigestValue>
+        <dsig:DigestValue>/PQ+SYYb8iEhfWEK+UlCrsoQReTmBlFE4BK6OSVy7pI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

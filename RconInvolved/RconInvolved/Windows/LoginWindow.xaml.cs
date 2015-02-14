@@ -160,6 +160,11 @@
 
         private void ListBoxServers_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
+            UpdateUIUsingCollection();
+        }
+
+        public void UpdateUIUsingCollection()
+        {
             int index = this.ListBoxServers.SelectedIndex;
             Logger.MonitoringLogger.Debug("Selection changed to index " + index);
 
@@ -188,7 +193,7 @@
             Logger.MonitoringLogger.Debug("Updating UI with new parameters");
             this.HostnameValue.Text = hostnameValue;
             this.PortValue.Text = portValue;
-            this.PasswordValue.Text = passwordValue;
+            this.PasswordValue.Password = passwordValue;
             this.AutoReconnectSwitch.IsChecked = autoReconnectValue;
             this.ConnectButton.IsEnabled = activeButton;
             this.ModifyButton.IsEnabled = activeButton;
@@ -259,12 +264,12 @@
 
         private void ModifyButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageDialog.ShowAsync(
-                        "WIP",
-                        "Functionnalité pas encore implémentée !",
-                        MessageBoxButton.OK,
-                        MessageDialogType.Light,
-                        this);
+            this.AppBarLogin.IsOpen = false;
+            CreateProfileOverlayView window = new CreateProfileOverlayView(this, GetWindow(this), loginDataView, profileSelected);
+            this.TaskbarProgressState = System.Windows.Shell.TaskbarItemProgressState.Paused;
+            this.TaskbarProgressValue = 50;
+            //this.TaskbarIsBusy = true;
+            window.Show();
         }
 
         private void ConnectButton_Click(object sender, RoutedEventArgs e)

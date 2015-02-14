@@ -21,3 +21,380 @@
 [INFO] - [10] - 2015-02-05 22:26:34,767 - MonitoringLogger - Rcon_Involved - Populate profile list with information from the database 
 [INFO] - [10] - 2015-02-05 22:26:34,768 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
 [DEBUG] - [10] - 2015-02-05 22:26:34,896 - MonitoringLogger - Rcon_Involved - LoginWindow loaded function ended 
+[INFO] - [10] - 2015-02-14 12:23:03,579 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-02-14 12:23:03,646 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [10] - 2015-02-14 12:23:03,647 - MonitoringLogger - Rcon_Involved - Configuration FIle path : D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\\Conf\ 
+[INFO] - [10] - 2015-02-14 12:23:03,647 - MonitoringLogger - Rcon_Involved - Reading configuration File 
+[WARN] - [10] - 2015-02-14 12:23:03,676 - MonitoringLogger - Rcon_Involved - This application is not network Deployed or run in debug mode 
+[INFO] - [10] - 2015-02-14 12:23:03,677 - MonitoringLogger - Rcon_Involved - Initializing SQLite database 
+[WARN] - [10] - 2015-02-14 12:23:04,024 - MonitoringLogger - Rcon_Involved - Generate new table profileList 
+[DEBUG] - [10] - 2015-02-14 12:23:05,574 - MonitoringLogger - Rcon_Involved - Splashscreen window Instanciated 
+[DEBUG] - [10] - 2015-02-14 12:23:05,998 - MonitoringLogger - Rcon_Involved - Deployment window initialized 
+[WARN] - [10] - 2015-02-14 12:23:07,933 - MonitoringLogger - Rcon_Involved - Application not deployed with clickonce 
+[INFO] - [10] - 2015-02-14 12:23:10,585 - MonitoringLogger - Rcon_Involved - Splashscreen timer, versionChecked :True - changelogChoice :True 
+[INFO] - [10] - 2015-02-14 12:23:10,585 - MonitoringLogger - Rcon_Involved - Splashscreen timer, checking if Changelog need to be displayed 
+[DEBUG] - [10] - 2015-02-14 12:23:10,595 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-02-14 12:23:10,790 - MonitoringLogger - Rcon_Involved - Login Window Initialized 
+[DEBUG] - [10] - 2015-02-14 12:23:10,993 - MonitoringLogger - Rcon_Involved - Login window loaded event 
+[DEBUG] - [10] - 2015-02-14 12:23:10,994 - MonitoringLogger - Rcon_Involved - Configuration of LoginWindowloaded : 
+<LoginWindow>
+  <Top>200</Top>
+  <Left>200</Left>
+</LoginWindow> 
+[INFO] - [10] - 2015-02-14 12:23:10,995 - MonitoringLogger - Rcon_Involved - Populate profile list with information from the database 
+[INFO] - [10] - 2015-02-14 12:23:10,995 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[DEBUG] - [10] - 2015-02-14 12:23:11,170 - MonitoringLogger - Rcon_Involved - LoginWindow loaded function ended 
+[DEBUG] - [10] - 2015-02-14 12:23:26,310 - MonitoringLogger - Rcon_Involved - BattleEye View Initialized 
+[DEBUG] - [10] - 2015-02-14 12:23:26,446 - MonitoringLogger - Rcon_Involved - Notification View Created 
+[INFO] - [10] - 2015-02-14 12:23:44,107 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:23:44,117 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[DEBUG] - [10] - 2015-02-14 12:23:45,915 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:23:45,916 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:23:47,197 - MonitoringLogger - Rcon_Involved - BattleEye View Initialized 
+[DEBUG] - [10] - 2015-02-14 12:23:47,289 - MonitoringLogger - Rcon_Involved - Notification View Created 
+[DEBUG] - [10] - 2015-02-14 12:23:58,619 - MonitoringLogger - Rcon_Involved - Login window closed 
+[DEBUG] - [10] - 2015-02-14 12:23:58,620 - MonitoringLogger - Rcon_Involved - Saving configuration of LoginWindowloaded 
+[INFO] - [10] - 2015-02-14 12:23:58,632 - MonitoringLogger - Rcon_Involved - RconInvolved is closing, see you ! 
+[INFO] - [10] - 2015-02-14 12:26:11,859 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-02-14 12:26:11,885 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [10] - 2015-02-14 12:26:11,886 - MonitoringLogger - Rcon_Involved - Configuration FIle path : D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\\Conf\ 
+[INFO] - [10] - 2015-02-14 12:26:11,886 - MonitoringLogger - Rcon_Involved - Reading configuration File 
+[WARN] - [10] - 2015-02-14 12:26:11,909 - MonitoringLogger - Rcon_Involved - This application is not network Deployed or run in debug mode 
+[INFO] - [10] - 2015-02-14 12:26:11,910 - MonitoringLogger - Rcon_Involved - Initializing SQLite database 
+[WARN] - [10] - 2015-02-14 12:26:11,965 - MonitoringLogger - Rcon_Involved - Generate new table profileList 
+[DEBUG] - [10] - 2015-02-14 12:26:13,427 - MonitoringLogger - Rcon_Involved - Splashscreen window Instanciated 
+[DEBUG] - [10] - 2015-02-14 12:26:13,633 - MonitoringLogger - Rcon_Involved - Deployment window initialized 
+[WARN] - [10] - 2015-02-14 12:26:15,734 - MonitoringLogger - Rcon_Involved - Application not deployed with clickonce 
+[INFO] - [10] - 2015-02-14 12:26:18,443 - MonitoringLogger - Rcon_Involved - Splashscreen timer, versionChecked :True - changelogChoice :True 
+[INFO] - [10] - 2015-02-14 12:26:18,443 - MonitoringLogger - Rcon_Involved - Splashscreen timer, checking if Changelog need to be displayed 
+[DEBUG] - [10] - 2015-02-14 12:26:18,454 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-02-14 12:26:18,686 - MonitoringLogger - Rcon_Involved - Login Window Initialized 
+[DEBUG] - [10] - 2015-02-14 12:26:18,821 - MonitoringLogger - Rcon_Involved - Login window loaded event 
+[DEBUG] - [10] - 2015-02-14 12:26:18,822 - MonitoringLogger - Rcon_Involved - Configuration of LoginWindowloaded : 
+<LoginWindow>
+  <Top>200</Top>
+  <Left>200</Left>
+</LoginWindow> 
+[INFO] - [10] - 2015-02-14 12:26:18,823 - MonitoringLogger - Rcon_Involved - Populate profile list with information from the database 
+[INFO] - [10] - 2015-02-14 12:26:18,824 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[INFO] - [10] - 2015-02-14 12:26:18,904 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:26:18,914 - MonitoringLogger - Rcon_Involved - System.Data.DataRow 
+[DEBUG] - [10] - 2015-02-14 12:26:19,100 - MonitoringLogger - Rcon_Involved - LoginWindow loaded function ended 
+[DEBUG] - [10] - 2015-02-14 12:26:20,208 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:26:20,209 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:26:25,003 - MonitoringLogger - Rcon_Involved - BattleEye View Initialized 
+[DEBUG] - [10] - 2015-02-14 12:26:25,057 - MonitoringLogger - Rcon_Involved - Notification View Created 
+[INFO] - [10] - 2015-02-14 12:26:38,403 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:26:38,410 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[ERROR] - [10] - 2015-02-14 12:26:38,697 - ExceptionLogger - Rcon_Involved - Attempt to update database error :
+System.Data.SQLite.SQLiteException (0x80004005): SQL logic error or missing database
+no such column: NouveauProfil
+   à System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   à System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   à System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   à System.Data.SQLite.SQLiteDataReader.NextResult()
+   à System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   à System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   à RconInvolved.DataPersistance.SQLiteDatabase.ExecuteNonQuery(String sql) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 155
+   à RconInvolved.DataPersistance.SQLiteDatabase.Update(String tableName, Dictionary`2 data, String where) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 201 
+[DEBUG] - [10] - 2015-02-14 12:26:50,685 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:26:50,686 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:26:51,437 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:26:51,437 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:26:51,925 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:26:51,925 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:26:52,452 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:26:52,452 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:26:52,908 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:26:52,908 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:26:53,515 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:26:53,516 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:26:54,397 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:26:54,398 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:26:55,852 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:26:55,853 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:26:56,484 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:26:56,485 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:26:58,190 - MonitoringLogger - Rcon_Involved - Login window closed 
+[DEBUG] - [10] - 2015-02-14 12:26:58,191 - MonitoringLogger - Rcon_Involved - Saving configuration of LoginWindowloaded 
+[INFO] - [10] - 2015-02-14 12:26:58,200 - MonitoringLogger - Rcon_Involved - RconInvolved is closing, see you ! 
+[INFO] - [10] - 2015-02-14 12:33:29,188 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-02-14 12:33:29,216 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [10] - 2015-02-14 12:33:29,217 - MonitoringLogger - Rcon_Involved - Configuration FIle path : D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\\Conf\ 
+[INFO] - [10] - 2015-02-14 12:33:29,218 - MonitoringLogger - Rcon_Involved - Reading configuration File 
+[WARN] - [10] - 2015-02-14 12:33:29,276 - MonitoringLogger - Rcon_Involved - This application is not network Deployed or run in debug mode 
+[INFO] - [10] - 2015-02-14 12:33:29,277 - MonitoringLogger - Rcon_Involved - Initializing SQLite database 
+[WARN] - [10] - 2015-02-14 12:33:29,330 - MonitoringLogger - Rcon_Involved - Generate new table profileList 
+[DEBUG] - [10] - 2015-02-14 12:33:30,803 - MonitoringLogger - Rcon_Involved - Splashscreen window Instanciated 
+[DEBUG] - [10] - 2015-02-14 12:33:31,038 - MonitoringLogger - Rcon_Involved - Deployment window initialized 
+[WARN] - [10] - 2015-02-14 12:33:32,905 - MonitoringLogger - Rcon_Involved - Application not deployed with clickonce 
+[INFO] - [10] - 2015-02-14 12:33:35,821 - MonitoringLogger - Rcon_Involved - Splashscreen timer, versionChecked :True - changelogChoice :True 
+[INFO] - [10] - 2015-02-14 12:33:35,822 - MonitoringLogger - Rcon_Involved - Splashscreen timer, checking if Changelog need to be displayed 
+[DEBUG] - [10] - 2015-02-14 12:33:35,832 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-02-14 12:33:36,092 - MonitoringLogger - Rcon_Involved - Login Window Initialized 
+[DEBUG] - [10] - 2015-02-14 12:33:36,294 - MonitoringLogger - Rcon_Involved - Login window loaded event 
+[DEBUG] - [10] - 2015-02-14 12:33:36,295 - MonitoringLogger - Rcon_Involved - Configuration of LoginWindowloaded : 
+<LoginWindow>
+  <Top>200</Top>
+  <Left>200</Left>
+</LoginWindow> 
+[INFO] - [10] - 2015-02-14 12:33:36,296 - MonitoringLogger - Rcon_Involved - Populate profile list with information from the database 
+[INFO] - [10] - 2015-02-14 12:33:36,297 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[INFO] - [10] - 2015-02-14 12:33:36,317 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:33:36,322 - MonitoringLogger - Rcon_Involved - System.Data.DataRow 
+[DEBUG] - [10] - 2015-02-14 12:33:36,480 - MonitoringLogger - Rcon_Involved - LoginWindow loaded function ended 
+[DEBUG] - [10] - 2015-02-14 12:33:37,551 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:33:37,552 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:33:39,172 - MonitoringLogger - Rcon_Involved - BattleEye View Initialized 
+[DEBUG] - [10] - 2015-02-14 12:33:39,222 - MonitoringLogger - Rcon_Involved - Notification View Created 
+[INFO] - [10] - 2015-02-14 12:33:52,741 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[ERROR] - [10] - 2015-02-14 12:33:52,839 - ExceptionLogger - Rcon_Involved - Attempt to update database error :
+System.Data.SQLite.SQLiteException (0x80004005): SQL logic error or missing database
+no such column: TestProfil
+   à System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   à System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   à System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   à System.Data.SQLite.SQLiteDataReader.NextResult()
+   à System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   à System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   à RconInvolved.DataPersistance.SQLiteDatabase.ExecuteNonQuery(String sql) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 155
+   à RconInvolved.DataPersistance.SQLiteDatabase.Update(String tableName, Dictionary`2 data, String where) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 201 
+[DEBUG] - [10] - 2015-02-14 12:35:24,069 - MonitoringLogger - Rcon_Involved - BattleEye View Initialized 
+[DEBUG] - [10] - 2015-02-14 12:35:24,110 - MonitoringLogger - Rcon_Involved - Notification View Created 
+[INFO] - [10] - 2015-02-14 12:35:38,834 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[INFO] - [10] - 2015-02-14 12:35:38,834 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[DEBUG] - [10] - 2015-02-14 12:35:40,173 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:40,173 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:40,757 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:40,757 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:41,227 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:41,227 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:41,675 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:41,676 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:42,147 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:42,148 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:42,643 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:42,644 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:43,163 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:43,163 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:43,667 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:43,668 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:44,198 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:44,198 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:44,699 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:44,699 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:45,243 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:45,243 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:45,803 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:45,804 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:46,317 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:46,317 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:46,755 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:46,756 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:47,251 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:47,252 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:47,756 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:47,757 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:48,285 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:48,286 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:48,950 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:48,950 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:49,476 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:49,476 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:49,964 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:49,964 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:50,428 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:50,428 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:50,908 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:50,908 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:51,484 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:51,484 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:52,028 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:52,028 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:52,524 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:52,524 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:53,099 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:53,100 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:53,629 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:53,629 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:54,164 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:54,164 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:54,675 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:54,676 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:55,155 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:55,156 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:55,715 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:55,716 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:56,246 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:35:56,246 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:35:56,661 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:35:56,662 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[INFO] - [10] - 2015-02-14 12:37:25,982 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-02-14 12:37:26,007 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [10] - 2015-02-14 12:37:26,007 - MonitoringLogger - Rcon_Involved - Configuration FIle path : D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\\Conf\ 
+[INFO] - [10] - 2015-02-14 12:37:26,008 - MonitoringLogger - Rcon_Involved - Reading configuration File 
+[WARN] - [10] - 2015-02-14 12:37:26,036 - MonitoringLogger - Rcon_Involved - This application is not network Deployed or run in debug mode 
+[INFO] - [10] - 2015-02-14 12:37:26,037 - MonitoringLogger - Rcon_Involved - Initializing SQLite database 
+[WARN] - [10] - 2015-02-14 12:37:26,092 - MonitoringLogger - Rcon_Involved - Generate new table profileList 
+[DEBUG] - [10] - 2015-02-14 12:37:27,586 - MonitoringLogger - Rcon_Involved - Splashscreen window Instanciated 
+[DEBUG] - [10] - 2015-02-14 12:37:27,822 - MonitoringLogger - Rcon_Involved - Deployment window initialized 
+[WARN] - [10] - 2015-02-14 12:37:29,517 - MonitoringLogger - Rcon_Involved - Application not deployed with clickonce 
+[INFO] - [10] - 2015-02-14 12:37:32,604 - MonitoringLogger - Rcon_Involved - Splashscreen timer, versionChecked :True - changelogChoice :True 
+[INFO] - [10] - 2015-02-14 12:37:32,605 - MonitoringLogger - Rcon_Involved - Splashscreen timer, checking if Changelog need to be displayed 
+[DEBUG] - [10] - 2015-02-14 12:37:32,617 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-02-14 12:37:32,869 - MonitoringLogger - Rcon_Involved - Login Window Initialized 
+[DEBUG] - [10] - 2015-02-14 12:37:33,062 - MonitoringLogger - Rcon_Involved - Login window loaded event 
+[DEBUG] - [10] - 2015-02-14 12:37:33,063 - MonitoringLogger - Rcon_Involved - Configuration of LoginWindowloaded : 
+<LoginWindow>
+  <Top>200</Top>
+  <Left>200</Left>
+</LoginWindow> 
+[INFO] - [10] - 2015-02-14 12:37:33,064 - MonitoringLogger - Rcon_Involved - Populate profile list with information from the database 
+[INFO] - [10] - 2015-02-14 12:37:33,064 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[INFO] - [10] - 2015-02-14 12:37:33,084 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:37:33,088 - MonitoringLogger - Rcon_Involved - System.Data.DataRow 
+[INFO] - [10] - 2015-02-14 12:37:33,089 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:37:33,092 - MonitoringLogger - Rcon_Involved - System.Data.DataRow 
+[DEBUG] - [10] - 2015-02-14 12:37:33,271 - MonitoringLogger - Rcon_Involved - LoginWindow loaded function ended 
+[DEBUG] - [10] - 2015-02-14 12:37:34,513 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:37:34,514 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:37:35,117 - MonitoringLogger - Rcon_Involved - Selection changed to index 1 
+[DEBUG] - [10] - 2015-02-14 12:37:35,118 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:37:35,694 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:37:35,694 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:37:38,339 - MonitoringLogger - Rcon_Involved - BattleEye View Initialized 
+[DEBUG] - [10] - 2015-02-14 12:37:38,390 - MonitoringLogger - Rcon_Involved - Notification View Created 
+[INFO] - [10] - 2015-02-14 12:37:53,860 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[ERROR] - [10] - 2015-02-14 12:37:53,967 - ExceptionLogger - Rcon_Involved - Attempt to update database error :
+System.Data.SQLite.SQLiteException (0x80004005): SQL logic error or missing database
+no such column: TestProfil
+   à System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   à System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   à System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   à System.Data.SQLite.SQLiteDataReader.NextResult()
+   à System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   à System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   à RconInvolved.DataPersistance.SQLiteDatabase.ExecuteNonQuery(String sql) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 155
+   à RconInvolved.DataPersistance.SQLiteDatabase.Update(String tableName, Dictionary`2 data, String where) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 201 
+[INFO] - [10] - 2015-02-14 12:40:01,553 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-02-14 12:40:01,571 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [10] - 2015-02-14 12:40:01,571 - MonitoringLogger - Rcon_Involved - Configuration FIle path : D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\\Conf\ 
+[INFO] - [10] - 2015-02-14 12:40:01,572 - MonitoringLogger - Rcon_Involved - Reading configuration File 
+[WARN] - [10] - 2015-02-14 12:40:01,606 - MonitoringLogger - Rcon_Involved - This application is not network Deployed or run in debug mode 
+[INFO] - [10] - 2015-02-14 12:40:01,606 - MonitoringLogger - Rcon_Involved - Initializing SQLite database 
+[WARN] - [10] - 2015-02-14 12:40:01,663 - MonitoringLogger - Rcon_Involved - Generate new table profileList 
+[DEBUG] - [10] - 2015-02-14 12:40:03,104 - MonitoringLogger - Rcon_Involved - Splashscreen window Instanciated 
+[DEBUG] - [10] - 2015-02-14 12:40:03,357 - MonitoringLogger - Rcon_Involved - Deployment window initialized 
+[WARN] - [10] - 2015-02-14 12:40:04,547 - MonitoringLogger - Rcon_Involved - Application not deployed with clickonce 
+[INFO] - [10] - 2015-02-14 12:40:08,117 - MonitoringLogger - Rcon_Involved - Splashscreen timer, versionChecked :True - changelogChoice :True 
+[INFO] - [10] - 2015-02-14 12:40:08,117 - MonitoringLogger - Rcon_Involved - Splashscreen timer, checking if Changelog need to be displayed 
+[DEBUG] - [10] - 2015-02-14 12:40:08,128 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-02-14 12:40:08,366 - MonitoringLogger - Rcon_Involved - Login Window Initialized 
+[DEBUG] - [10] - 2015-02-14 12:40:08,561 - MonitoringLogger - Rcon_Involved - Login window loaded event 
+[DEBUG] - [10] - 2015-02-14 12:40:08,562 - MonitoringLogger - Rcon_Involved - Configuration of LoginWindowloaded : 
+<LoginWindow>
+  <Top>200</Top>
+  <Left>200</Left>
+</LoginWindow> 
+[INFO] - [10] - 2015-02-14 12:40:08,564 - MonitoringLogger - Rcon_Involved - Populate profile list with information from the database 
+[INFO] - [10] - 2015-02-14 12:40:08,564 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[INFO] - [10] - 2015-02-14 12:40:08,586 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:40:08,590 - MonitoringLogger - Rcon_Involved - System.Data.DataRow 
+[INFO] - [10] - 2015-02-14 12:40:08,590 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:40:08,593 - MonitoringLogger - Rcon_Involved - System.Data.DataRow 
+[DEBUG] - [10] - 2015-02-14 12:40:08,753 - MonitoringLogger - Rcon_Involved - LoginWindow loaded function ended 
+[DEBUG] - [10] - 2015-02-14 12:40:17,142 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:40:17,143 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:40:18,356 - MonitoringLogger - Rcon_Involved - BattleEye View Initialized 
+[DEBUG] - [10] - 2015-02-14 12:40:18,405 - MonitoringLogger - Rcon_Involved - Notification View Created 
+[INFO] - [10] - 2015-02-14 12:40:26,287 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[ERROR] - [10] - 2015-02-14 12:42:26,871 - ExceptionLogger - Rcon_Involved - Attempt to update database error :
+System.Data.SQLite.SQLiteException (0x80004005): SQL logic error or missing database
+no such column: TestProfil
+   à System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   à System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   à System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   à System.Data.SQLite.SQLiteDataReader.NextResult()
+   à System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   à System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   à System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   à RconInvolved.DataPersistance.SQLiteDatabase.ExecuteNonQuery(String sql) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 155
+   à RconInvolved.DataPersistance.SQLiteDatabase.Update(String tableName, Dictionary`2 data, String where) dans d:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\DataPersistance\SQLiteDatabase.cs:ligne 201 
+[INFO] - [10] - 2015-02-14 12:43:47,789 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-02-14 12:43:47,813 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [10] - 2015-02-14 12:43:47,813 - MonitoringLogger - Rcon_Involved - Configuration FIle path : D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\\Conf\ 
+[INFO] - [10] - 2015-02-14 12:43:47,814 - MonitoringLogger - Rcon_Involved - Reading configuration File 
+[WARN] - [10] - 2015-02-14 12:43:47,844 - MonitoringLogger - Rcon_Involved - This application is not network Deployed or run in debug mode 
+[INFO] - [10] - 2015-02-14 12:43:47,845 - MonitoringLogger - Rcon_Involved - Initializing SQLite database 
+[WARN] - [10] - 2015-02-14 12:43:47,903 - MonitoringLogger - Rcon_Involved - Generate new table profileList 
+[DEBUG] - [10] - 2015-02-14 12:43:49,361 - MonitoringLogger - Rcon_Involved - Splashscreen window Instanciated 
+[DEBUG] - [10] - 2015-02-14 12:43:49,603 - MonitoringLogger - Rcon_Involved - Deployment window initialized 
+[WARN] - [10] - 2015-02-14 12:43:51,502 - MonitoringLogger - Rcon_Involved - Application not deployed with clickonce 
+[INFO] - [10] - 2015-02-14 12:43:54,380 - MonitoringLogger - Rcon_Involved - Splashscreen timer, versionChecked :True - changelogChoice :True 
+[INFO] - [10] - 2015-02-14 12:43:54,381 - MonitoringLogger - Rcon_Involved - Splashscreen timer, checking if Changelog need to be displayed 
+[DEBUG] - [10] - 2015-02-14 12:43:54,393 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-02-14 12:43:54,647 - MonitoringLogger - Rcon_Involved - Login Window Initialized 
+[DEBUG] - [10] - 2015-02-14 12:43:54,809 - MonitoringLogger - Rcon_Involved - Login window loaded event 
+[DEBUG] - [10] - 2015-02-14 12:43:54,809 - MonitoringLogger - Rcon_Involved - Configuration of LoginWindowloaded : 
+<LoginWindow>
+  <Top>200</Top>
+  <Left>200</Left>
+</LoginWindow> 
+[INFO] - [10] - 2015-02-14 12:43:54,811 - MonitoringLogger - Rcon_Involved - Populate profile list with information from the database 
+[INFO] - [10] - 2015-02-14 12:43:54,811 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[INFO] - [10] - 2015-02-14 12:43:54,831 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:43:54,836 - MonitoringLogger - Rcon_Involved - System.Data.DataRow 
+[INFO] - [10] - 2015-02-14 12:43:54,837 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:43:54,840 - MonitoringLogger - Rcon_Involved - System.Data.DataRow 
+[DEBUG] - [10] - 2015-02-14 12:43:55,061 - MonitoringLogger - Rcon_Involved - LoginWindow loaded function ended 
+[DEBUG] - [10] - 2015-02-14 12:43:59,613 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:43:59,614 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:44:01,052 - MonitoringLogger - Rcon_Involved - BattleEye View Initialized 
+[DEBUG] - [10] - 2015-02-14 12:44:01,102 - MonitoringLogger - Rcon_Involved - Notification View Created 
+[INFO] - [10] - 2015-02-14 12:44:09,828 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[INFO] - [10] - 2015-02-14 12:58:22,409 - MonitoringLogger - Rcon_Involved - RconInvolved is starting 
+[INFO] - [10] - 2015-02-14 12:58:22,433 - MonitoringLogger - Rcon_Involved - Configuration File Initialization 
+[INFO] - [10] - 2015-02-14 12:58:22,433 - MonitoringLogger - Rcon_Involved - Configuration FIle path : D:\Mon Bureau\Repositories\InvolvedRCON\RconInvolved\RconInvolved\bin\Debug\\Conf\ 
+[INFO] - [10] - 2015-02-14 12:58:22,435 - MonitoringLogger - Rcon_Involved - Reading configuration File 
+[WARN] - [10] - 2015-02-14 12:58:22,464 - MonitoringLogger - Rcon_Involved - This application is not network Deployed or run in debug mode 
+[INFO] - [10] - 2015-02-14 12:58:22,465 - MonitoringLogger - Rcon_Involved - Initializing SQLite database 
+[WARN] - [10] - 2015-02-14 12:58:22,520 - MonitoringLogger - Rcon_Involved - Generate new table profileList 
+[DEBUG] - [10] - 2015-02-14 12:58:23,952 - MonitoringLogger - Rcon_Involved - Splashscreen window Instanciated 
+[DEBUG] - [10] - 2015-02-14 12:58:24,157 - MonitoringLogger - Rcon_Involved - Deployment window initialized 
+[WARN] - [10] - 2015-02-14 12:58:25,987 - MonitoringLogger - Rcon_Involved - Application not deployed with clickonce 
+[INFO] - [10] - 2015-02-14 12:58:28,970 - MonitoringLogger - Rcon_Involved - Splashscreen timer, versionChecked :True - changelogChoice :True 
+[INFO] - [10] - 2015-02-14 12:58:28,970 - MonitoringLogger - Rcon_Involved - Splashscreen timer, checking if Changelog need to be displayed 
+[DEBUG] - [10] - 2015-02-14 12:58:28,983 - MonitoringLogger - Rcon_Involved - Initializing LoginWindow 
+[DEBUG] - [10] - 2015-02-14 12:58:29,270 - MonitoringLogger - Rcon_Involved - Login Window Initialized 
+[DEBUG] - [10] - 2015-02-14 12:58:29,448 - MonitoringLogger - Rcon_Involved - Login window loaded event 
+[DEBUG] - [10] - 2015-02-14 12:58:29,449 - MonitoringLogger - Rcon_Involved - Configuration of LoginWindowloaded : 
+<LoginWindow>
+  <Top>200</Top>
+  <Left>200</Left>
+</LoginWindow> 
+[INFO] - [10] - 2015-02-14 12:58:29,449 - MonitoringLogger - Rcon_Involved - Populate profile list with information from the database 
+[INFO] - [10] - 2015-02-14 12:58:29,450 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[INFO] - [10] - 2015-02-14 12:58:29,471 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:58:29,475 - MonitoringLogger - Rcon_Involved - System.Data.DataRow 
+[INFO] - [10] - 2015-02-14 12:58:29,476 - MonitoringLogger - Rcon_Involved - Selection changedSystem.Collections.Specialized.NotifyCollectionChangedEventArgs 
+[INFO] - [10] - 2015-02-14 12:58:29,478 - MonitoringLogger - Rcon_Involved - System.Data.DataRow 
+[DEBUG] - [10] - 2015-02-14 12:58:29,641 - MonitoringLogger - Rcon_Involved - LoginWindow loaded function ended 
+[DEBUG] - [10] - 2015-02-14 12:58:36,026 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:58:36,028 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:58:37,357 - MonitoringLogger - Rcon_Involved - BattleEye View Initialized 
+[DEBUG] - [10] - 2015-02-14 12:58:37,406 - MonitoringLogger - Rcon_Involved - Notification View Created 
+[INFO] - [10] - 2015-02-14 12:58:43,828 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[DEBUG] - [10] - 2015-02-14 12:58:43,921 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:58:43,921 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
+[DEBUG] - [10] - 2015-02-14 12:58:47,858 - MonitoringLogger - Rcon_Involved - BattleEye View Initialized 
+[DEBUG] - [10] - 2015-02-14 12:58:47,899 - MonitoringLogger - Rcon_Involved - Notification View Created 
+[INFO] - [10] - 2015-02-14 12:58:54,550 - MonitoringLogger - Rcon_Involved - Instanciating Sqlite Database 
+[DEBUG] - [10] - 2015-02-14 12:58:54,626 - MonitoringLogger - Rcon_Involved - Selection changed to index 0 
+[DEBUG] - [10] - 2015-02-14 12:58:54,627 - MonitoringLogger - Rcon_Involved - Updating UI with new parameters 
